@@ -1,15 +1,13 @@
-$font-path: "https://webassets.iota.org/fonts/" !default;
+// $font-path: "https://webassets.iota.org/fonts/" !default;
+// @import "./fonts.scss";
 
-@import "./fonts.scss";
-
-$fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-$metropolis: "Metropolis", $fallback-fonts;
-$metropolis-light: "Metropolis Light", $fallback-fonts;
-$metropolis-medium: "Metropolis Medium", $fallback-fonts;
-$metropolis-semi-bold: "Metropolis Semi Bold", $fallback-fonts;
-$metropolis-bold: "Metropolis Bold", $fallback-fonts;
+// $fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+//     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// $metropolis: "Metropolis", $fallback-fonts;
+// $metropolis-light: "Metropolis Light", $fallback-fonts;
+// $metropolis-medium: "Metropolis Medium", $fallback-fonts;
+// $metropolis-semi-bold: "Metropolis Semi Bold", $fallback-fonts;
+// $metropolis-bold: "Metropolis Bold", $fallback-fonts;
 
 @tailwind components;
 @tailwind base;
@@ -18,7 +16,8 @@ $metropolis-bold: "Metropolis Bold", $fallback-fonts;
 html,
 body,
 #svelte {
-    font-family: "Metropolis Medium";
+    // font-family: "Metropolis Medium";
+
     @apply h-full;
     @apply overflow-x-hidden;
 }
@@ -27,8 +26,29 @@ h1 {
     @apply text-32;
     @apply font-bold;
     @apply leading-130;
+
     @screen lg {
         @apply text-48;
+    }
+}
+
+h2 {
+    @apply text-28;
+    @apply font-bold;
+    @apply leading-110;
+
+    @screen lg {
+        @apply text-40;
+    }
+}
+
+h3 {
+    @apply font-bold;
+    @apply text-24;
+    @apply leading-125;
+
+    @screen lg {
+        @apply text-32;
     }
 }
 
@@ -38,7 +58,13 @@ h4 {
     @apply tracking-0.02;
 }
 
+p {
+    @apply leading-150;
+    @apply tracking-0.04;
+}
+
 .image-shadow {
     box-shadow: 5px 5px 0px 2px #333333;
+
     @apply rounded;
 }
