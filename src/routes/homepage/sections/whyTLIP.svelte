@@ -24,13 +24,13 @@
 <section class=" w-full h-full relative" {id}>
     <div class="w-full h-full lg:flex">
         <div class="image w-full h-full lg:w-1/2 bg-cover bg-no-repeat" />
-        <div class="bg-green-1 w-full lg:w-1/2 py-16 lg:py-28 px-6 lg:px-32 text-white">
+        <div class="bg-green-5 w-full lg:w-1/2 py-16 lg:py-28 px-6 lg:px-32 text-white">
             <div class="mb-9">
                 <h2 class="mb-6">{HEADINGS.title}</h2>
                 <p class="">{HEADINGS.description}</p>
             </div>
             {#each REASONS as reason}
-                <div class="w-1/2 mb-6">
+                <div class="w-1/2 mb-6 last:mb-0">
                     <h3 class="mb-1.5">{reason.title}</h3>
                     <p>{reason.description}</p>
                 </div>
