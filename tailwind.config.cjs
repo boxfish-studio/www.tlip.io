@@ -1,5 +1,4 @@
 const pxToRem = (px, base = 16) => `${px / base}rem`
-
 module.exports = {
     purge: {
         content: [
@@ -44,6 +43,7 @@ module.exports = {
                 20: pxToRem(20),
                 22: pxToRem(22),
                 24: pxToRem(24),
+                28: pxToRem(28),
                 32: pxToRem(32),
                 40: pxToRem(40),
                 48: pxToRem(48),
@@ -55,12 +55,15 @@ module.exports = {
                 100: '100%',
                 110: '110%',
                 120: '120%',
+                125: '125%',
                 130: '130%',
                 140: '140%',
+                150: '150%',
                 160: '160%',
             },
             letterSpacing: {
                 0.02: '0.02em',
+                0.04: '0.04em'
             },
         }
     },
