@@ -93,7 +93,7 @@
             <h3 class="tracking-0.02 mb-16 text-center leading-125">{SEE_IN_ACTION.title}</h3>
             <div class="flex flex-col lg:flex-row">
                 {#each SEE_IN_ACTION.cards as { title, video, description }}
-                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0">
+                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-16 lg:mb-0">
                         <!-- TODO: Replace img with video tag -->
                         <img src={video} alt="" class="image-shadow w-full" />
                         <h3 class="tracking-0.02 mb-4 leading-125 mt-6">{title}</h3>
