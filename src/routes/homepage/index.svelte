@@ -2,18 +2,22 @@
     import type { Section } from "$lib/types/components";
     import { Hero, HaveAnyQuestions, WhatIsTLIP, WhyTLIP, HowDoesTLIPWork, Benefits, WhoAreWe } from "./sections";
 
-    export const prerender = true;
+    export const prerender: boolean = true;
 </script>
 
 <script lang="ts">
+import { ObservedRoute } from "../../components";
+
     const sections: Section[] = [
         {
             component: Hero,
-            id: "hero"
+            id: "hero",
+            darkModeNavbar: true
         },
         {
             component: WhatIsTLIP,
-            id: "WhatIsTLIP"
+            id: "WhatIsTLIP",
+            darkModeNavbar: true
         },
         {
             component: WhyTLIP,
@@ -22,7 +26,8 @@
         },
         {
             component: HowDoesTLIPWork,
-            id: "HowDoesTLIPWork"
+            id: "HowDoesTLIPWork",
+            darkModeNavbar: true
         },
         {
             component: WhoAreWe,
@@ -30,7 +35,8 @@
         },
         {
             component: Benefits,
-            id: "Benefits"
+            id: "Benefits",
+            darkModeNavbar: true
         },
         {
             component: HaveAnyQuestions,
@@ -39,6 +45,4 @@
     ];
 </script>
 
-{#each sections as { component, id }}
-    <svelte:component this={component} {id} />
-{/each}
+<ObservedRoute {sections}/>

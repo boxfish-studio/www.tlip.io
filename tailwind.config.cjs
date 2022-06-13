@@ -44,6 +44,7 @@ module.exports = {
                 },
             },
             fontSize: {
+                12: pxToRem(12),
                 13: pxToRem(13),
                 14: pxToRem(14),
                 15: pxToRem(15),
@@ -79,7 +80,8 @@ module.exports = {
     variants: {
         extend: {
             backgroundColor: ["odd", "even"],
-            margin: ["last"]
+            margin: ["last"],
+            padding: ["last, first"]
         }
     },
     plugins: []

@@ -41,7 +41,7 @@
         @apply items-center;
         @apply justify-center;
         @apply text-center;
-        @apply bg-green-900;
+        @apply bg-green-500;
         @apply text-white;
         @apply rounded;
         @apply px-8;
