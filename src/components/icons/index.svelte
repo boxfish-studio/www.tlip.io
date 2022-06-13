@@ -1,9 +1,15 @@
 <script lang="ts">
-    import { Decentralized } from "./index";
+    import { Decentralized, Secure, Upgrades, Data, DataAccess, Innovative } from "./index";
+
     export let name: string;
 
     const icons = {
-        decentralized: Decentralized
+        decentralized: Decentralized,
+        secure: Secure,
+        upgrades: Upgrades,
+        data: Data,
+        dataAccess: DataAccess,
+        innovative: Innovative
     };
 </script>
 

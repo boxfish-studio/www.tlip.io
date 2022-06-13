@@ -19,7 +19,7 @@
         &.withBorder {
             @apply border;
             @apply rounded-md;
-            @apply border-grey-200;
+            @apply border-grey-100;
         }
 
         &.work {
