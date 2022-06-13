@@ -96,6 +96,10 @@
 
 <style lang="scss">
     nav {
+        a {
+            @apply transition-colors;
+            @apply duration-150;
+        }
         .highlight {
             @apply font-bold;
         }
