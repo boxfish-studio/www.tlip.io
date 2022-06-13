@@ -4,6 +4,9 @@
         Secure,
         Upgrades,
         Data,
+        Friendship,
+        DataQuality,
+        Finance,
         DataAccess,
         Innovative,
         Time,
@@ -28,6 +31,9 @@
         government: Government,
         trust: Trust,
         visibility: Visibility,
+        friendship: Friendship,
+        dataQuality: DataQuality,
+        finance: Finance,
         accuracy: Accuracy
     };
 </script>

@@ -1,4 +1,7 @@
 export { default as Decentralized } from "./decentralized.svelte";
+export { default as Friendship } from "./friendship.svelte";
+export { default as DataQuality } from "./dataQuality.svelte";
+export { default as Finance } from "./finance.svelte";
 export { default as Secure } from "./secure.svelte";
 export { default as Upgrades } from "./upgrades.svelte";
 export { default as Data } from "./data.svelte";
