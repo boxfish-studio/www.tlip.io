@@ -30,67 +30,73 @@
 </script>
 
 <nav
-    class="fixed px-6 md:px-10 xl:container py-1 flex justify-between z-10 w-full bg-blur xl:max-w-none text-grey-600
-    {classes}"
+    class="fixed py-1  z-10 w-full bg-blur  text-grey-600 {classes}"
     class:darkMode={!$darkModeNavbar && !sideMenuOpen}
 >
-    <a href="/" class="py-4">
-        <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
-    </a>
-    <div class="order-3 my-auto hidden lg:inline-block">
-        <Button {...BUTTON} />
-    </div>
-    <div class="flex flex-row">
-        {#if items}
-            <!-- Desktop -->
-            <ul class="flex-row flex-wrap items-center hidden w-full lg:flex transition-opacity duration-200">
-                {#each items as { title, url, id, onClick }}
-                    {#if title}
-                        <li class="px-4 first:pl-0 last:pr-0">
-                            {#if id && url === $page.path}
-                                <a
-                                    href={id}
-                                    on:click|preventDefault={onClick}
-                                    class="{id === "#" + $activeSectionId ? "highlight" : ''} hover:text-green-400">{title}</a
-                                >
-                            {:else if url || (id && url != $page.path)}
-                                <a href={url} class="{url === $page.path ? 'highlight' : ''} hover:text-green-400">{title}</a>
-                            {/if}
-                        </li>{/if}
-                {/each}
-            </ul>
-
-            <!-- Mobile -->
-            <div class="flex pt-3 lg:hidden">
-                <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} />
-            </div>
-            <aside class="bg-green-200 h-screen w-0 absolute left-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
+    <div class="container flex justify-between">
+        <a href="/" class="py-4">
+            <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
+        </a>
+        <div class="order-3 my-auto hidden lg:inline-block">
+            <Button {...BUTTON} />
+        </div>
+        <div class="flex flex-row">
+            {#if items}
+                <!-- Desktop -->
                 <ul
-                    class="h-screen pt-20 px-10 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen
-                        ? 'opacity-0'
-                        : 'opacity-100'}"
+                    class="flex-row items-center md:space-x-2 lg:space-x-4 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
                 >
                     {#each items as { title, url, id, onClick }}
                         {#if title}
-                            <li class="py-4 nav-link min-w-max">
+                            <li class="shrink-0">
                                 {#if id && url === $page.path}
                                     <a
-                                        class={id === "#" + $activeSectionId ? "highlight" : ''}
                                         href={id}
-                                        on:click|preventDefault={e => {
-                                            onClick(e);
-                                            closeMenu();
-                                        }}>{title}</a
+                                        on:click|preventDefault={onClick}
+                                        class="{id === '#' + $activeSectionId ? 'highlight' : ''} hover:text-green-400"
+                                        >{title}</a
                                     >
                                 {:else if url || (id && url != $page.path)}
-                                    <a class={url === $page.path ? 'highlight' : ''} href={url}>{title}</a>
+                                    <a href={url} class="{url === $page.path ? 'highlight' : ''} hover:text-green-400"
+                                        >{title}</a
+                                    >
                                 {/if}
-                            </li>
-                        {/if}
+                            </li>{/if}
                     {/each}
                 </ul>
-            </aside>
-        {/if}
+
+                <!-- Mobile -->
+                <div class="flex pt-3 lg:hidden">
+                    <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} />
+                </div>
+                <aside class="bg-green-200 h-screen w-0 absolute left-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
+                    <ul
+                        class="h-screen pt-20 px-10 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen
+                            ? 'opacity-0'
+                            : 'opacity-100'}"
+                    >
+                        {#each items as { title, url, id, onClick }}
+                            {#if title}
+                                <li class="py-4 nav-link min-w-max">
+                                    {#if id && url === $page.path}
+                                        <a
+                                            class={id === "#" + $activeSectionId ? "highlight" : ""}
+                                            href={id}
+                                            on:click|preventDefault={e => {
+                                                onClick(e);
+                                                closeMenu();
+                                            }}>{title}</a
+                                        >
+                                    {:else if url || (id && url != $page.path)}
+                                        <a class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                                    {/if}
+                                </li>
+                            {/if}
+                        {/each}
+                    </ul>
+                </aside>
+            {/if}
+        </div>
     </div>
 </nav>
 
