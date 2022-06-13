@@ -30,7 +30,7 @@
 </script>
 
 <nav
-    class="fixed px-10 xl:container py-1 flex justify-between z-10 w-full bg-blur xl:max-w-none text-grey-600
+    class="fixed px-6 md:px-10 xl:container py-1 flex justify-between z-10 w-full bg-blur xl:max-w-none text-grey-600
     {classes}"
     class:darkMode={!$darkModeNavbar && !sideMenuOpen}
 >
@@ -72,7 +72,7 @@
                 >
                     {#each items as { title, url, id, onClick }}
                         {#if title}
-                            <li class="py-4 nav-link border-b border-green-100 min-w-max">
+                            <li class="py-4 nav-link min-w-max">
                                 {#if id && url === $page.path}
                                     <a
                                         class={id === "#" + $activeSectionId ? "highlight" : ''}
