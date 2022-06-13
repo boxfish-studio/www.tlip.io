@@ -1,13 +1,13 @@
 <script lang="ts">
-    import { darkModeNavbar } from "$lib/store";
+    import { lightModeNavbar } from "$lib/store";
 
     export let open: boolean = false;
     export let onClick: (event: Event) => void = () => {};
     export let sideMenuOpen: boolean;
 
     const stroke: string = "currentColor";
-    $: stroke_current = $darkModeNavbar ? "white" : "black";
-    $: color = !$darkModeNavbar && !sideMenuOpen ? "white" : "black";
+    $: stroke_current = $lightModeNavbar ? "white" : "black";
+    $: color = $lightModeNavbar && !sideMenuOpen ? "white" : "dark";
 </script>
 
 <button class="z-20 py-4 rounded-full" class:open on:click={onClick}>

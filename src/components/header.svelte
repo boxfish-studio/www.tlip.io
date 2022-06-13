@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { activeSectionId, darkModeNavbar } from "$lib/store";
+    import { activeSectionId, lightModeNavbar } from "$lib/store";
     import Burger from "./burger.svelte";
     import Button from "./button.svelte";
     import type { Button as ButtonType } from "$lib/types/components";
@@ -30,8 +30,8 @@
 </script>
 
 <nav
-    class="fixed py-1  z-10 w-full bg-blur  text-grey-600 {classes}"
-    class:darkMode={!$darkModeNavbar && !sideMenuOpen}
+    class="fixed py-1  z-50 w-full bg-blur  text-grey-600 {classes}"
+    class:lightMode={!$lightModeNavbar && !sideMenuOpen}
 >
     <div class="container flex justify-between">
         <a href="/" class="py-4">
@@ -120,20 +120,20 @@
                 -webkit-backdrop-filter: blur(4px);
                 backdrop-filter: blur(4px);
             }
-            &.darkMode {
-                @apply text-white;
-                #logo {
-                    filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
-                }
+        }
+        &.lightMode {
+            @apply text-white;
+            #logo {
+                filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
             }
-            aside {
-                z-index: -1;
-                @apply w-0;
-                transition: width 0.3s ease-in-out;
-                &.open {
-                    @apply w-full;
-                    @apply whitespace-nowrap;
-                }
+        }
+        aside {
+            z-index: -1;
+            @apply w-0;
+            transition: width 0.3s ease-in-out;
+            &.open {
+                @apply w-full;
+                @apply whitespace-nowrap;
             }
         }
     }

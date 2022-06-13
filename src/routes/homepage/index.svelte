@@ -20,23 +20,19 @@
     const sections: Section[] = [
         {
             component: Hero,
-            id: "hero",
-            darkModeNavbar: true
+            id: "hero"
         },
         {
             component: WhatIsTLIP,
-            id: "WhatIsTLIP",
-            darkModeNavbar: true
+            id: "WhatIsTLIP"
         },
         {
             component: WhyTLIP,
-            id: "WhyTLIP",
-            darkModeNavbar: true
+            id: "WhyTLIP"
         },
         {
             component: HowDoesTLIPWork,
-            id: "HowDoesTLIPWork",
-            darkModeNavbar: true
+            id: "HowDoesTLIPWork"
         },
         {
             component: WhoAreWe,
@@ -49,7 +45,6 @@
         {
             component: Benefits,
             id: "Benefits",
-            darkModeNavbar: true
         },
         {
             component: HaveAnyQuestions,

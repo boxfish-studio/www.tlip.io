@@ -13,7 +13,7 @@ export interface Section {
     /**
      *
      */
-    darkModeNavbar?: boolean;
+    lightModeNavbar?: boolean;
 }
 
 /**
