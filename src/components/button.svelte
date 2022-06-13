@@ -41,14 +41,11 @@
         @apply items-center;
         @apply justify-center;
         @apply text-center;
-        @apply bg-green-900;
+        @apply bg-green-500;
         @apply text-white;
         @apply rounded;
         @apply px-8;
         @apply py-4;
-        @screen lg {
-            @apply justify-between;
-        }
         &:hover {
             opacity: 0.8;
             transition: opacity 0.2s ease;
