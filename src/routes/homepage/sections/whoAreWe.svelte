@@ -35,16 +35,16 @@
                     <div slot="eyebrow">
                         <Icon name={icon} />
                     </div>
-                    <h3 slot="title" class="tracking-0.02 my-3 leading-110">{title}</h3>
-                    <div slot="body" class="text-grey-500 tracking-0.04 leading-150">
+                    <h4 slot="title" class="my-3 leading-120 font-bold">{title}</h4>
+                    <p slot="body" class="text-grey-500">
                         {description}
-                    </div>
+                    </p>
                 </Card>
                 {/each}
             </div>
         </div>
         <div class="w-full flex justify-center">
-            <img src="./assets/who-are-we.png" alt="TLIP in everyday life" class="h-full object-cover"/>
+            <img src="./assets/who-are-we.png" alt="TLIP in everyday life" class="h-full w-full object-cover"/>
         </div>
     </div>
 </section>
