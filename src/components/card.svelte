@@ -14,7 +14,7 @@
     .card {
         &.small {
             @apply py-6;
-            @apply px-7;
+            @apply px-0;
         }
         &.withBorder {
             @apply border;

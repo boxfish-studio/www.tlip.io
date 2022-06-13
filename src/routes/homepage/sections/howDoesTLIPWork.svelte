@@ -9,32 +9,28 @@
             title: "Decentralised",
             description: "Data is not stored or controlled centrally.",
             icon: {
-                name: "decentralized",
-                fill: "#00874C"
+                name: "decentralized"
             }
         },
         {
             title: "Secure",
             description: "State-of-the-art security encryption avoids hacking by unauthorised parties.",
             icon: {
-                name: "secure",
-                fill: "#00874C"
+                name: "secure"
             }
         },
         {
             title: "Upgrades Legacy IT",
             description: "Plugs into existing systems and facilitate expansion through open APIs.",
             icon: {
-                name: "upgrades",
-                fill: "#00874C"
+                name: "upgrades"
             }
         },
         {
             title: "Data at the Source",
             description: "Keeps data local and traceable to source.",
             icon: {
-                name: "data",
-                fill: "#00874C"
+                name: "data"
             }
         },
         {
@@ -42,16 +38,14 @@
             description:
                 "Gives data producers control over who can access their data, thus guaranteeing privacy and confidentiality.",
             icon: {
-                name: "dataAccess",
-                fill: "#00874C"
+                name: "dataAccess"
             }
         },
         {
             title: "Innovative",
             description: "Immutable transparency and auditability through distributed ledger technology.",
             icon: {
-                name: "innovative",
-                fill: "#00874C"
+                name: "innovative"
             }
         }
     ];
