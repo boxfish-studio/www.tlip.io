@@ -58,7 +58,7 @@
 <section {id}>
     <div class="container py-20 lg:py-28">
         <h2 class="mb-12 lg:mb-16 ">{HEADINGS.title}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-x-16 lg:gap-y-20 mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-x-16 lg:gap-y-20">
             {#each HEADINGS.cards as { title, description, icon }}
                 <Card classes="" small>
                     <div slot="eyebrow" class="mb-6">
