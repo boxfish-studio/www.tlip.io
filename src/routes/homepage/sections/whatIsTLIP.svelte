@@ -19,8 +19,8 @@
                 </div>
                 <div
                     class="w-full xl:w-7/12 md:{idx % 2
-                        ? 'pr'
-                        : 'pl'}-28 flex flex-col md:items-start items-center justify-center text-center md:text-left"
+                        ? 'mr'
+                        : 'ml'}-28 flex flex-col md:items-start items-center justify-center text-center md:text-left"
                 >
                     <h4
                         class="font-bold text-15 lg:text-20 tracking-0.02 leading-6 capitalize lg:text-left text-grey-500"
