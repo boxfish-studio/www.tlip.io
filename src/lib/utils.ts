@@ -29,7 +29,7 @@ export const startActiveSectionObserver = (container: HTMLElement): (() => void)
             }
             activeSectionId.set(visible[0]);
         },
-        { threshold: [0] }
+        { threshold: [0], rootMargin: "-1px" }
     );
 
     for (const element of sectionElements) {
