@@ -3,7 +3,7 @@
     import type { Button as ButtonType } from "$lib/types/components";
     import type { Heading } from "$lib/types/sections";
 
-    export let id:string
+    export let id: string;
 
     const HEADING: Heading = {
         title: "Trade and Logistics Information Pipeline",
@@ -19,8 +19,12 @@
     ];
 </script>
 
-<section class="bg-green-200 w-full min-h-screen relative py-44 z-20" {id}>
-    <img src="/assets/background-hero.png" alt="background" class="absolute bottom-0 right-0 lg:w-4/5 lg:h-2/3 z-0 background-image" />
+<section class="bg-green-200 w-full h-screen relative py-44 z-20" {id}>
+    <img
+        src="/assets/background-hero.png"
+        alt="background"
+        class="absolute bottom-0 right-0 lg:w-4/5 lg:h-2/3 z-0 background-image"
+    />
     <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full z-10">
         <div class="lg:w-1/2 lg:mr-36">
             <h1 class="text-white mb-6">{HEADING.title}</h1>
@@ -44,4 +48,3 @@
         z-index: -1;
     }
 </style>
-
