@@ -3,7 +3,7 @@
     import type { Button as ButtonType } from "$lib/types/components";
     import type { Heading } from "$lib/types/sections";
 
-    export let id:string
+    export let id: string;
 
     const HEADING: Heading = {
         title: "Trade and Logistics Information Pipeline",
@@ -27,7 +27,7 @@
             <h4 class="text-white">{HEADING.description}</h4>
             <div class="flex jmt-12 lg:mt-10">
                 {#each BUTTONS as button}
-                    <div class="mr-6 last:mr-0">
+                    <div class="mr-6 last:mr-0 uppercase">
                         <Button {...button} />
                     </div>
                 {/each}
