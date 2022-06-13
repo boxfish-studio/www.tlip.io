@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Section } from '$lib/types/components'
-    import { activeSectionId, darkModeNavbar } from '$lib/store'
+    import { activeSectionId, lightModeNavbar } from '$lib/store'
     import { startActiveSectionObserver } from '$lib/utils'
     import { onMount } from 'svelte'
 
@@ -8,12 +8,12 @@
 
     let container: HTMLElement
 
-    $: darkModeNavbar.set(sections.find((s) => s.id === $activeSectionId)?.darkModeNavbar ?? false)
+    $: lightModeNavbar.set(sections.find((s) => s.id === $activeSectionId)?.lightModeNavbar ?? false)
 
     onMount(() => {
         const disconnect = startActiveSectionObserver(container)
         return () => {
-            darkModeNavbar.set(false)
+            lightModeNavbar.set(false)
             disconnect()
         }
     })

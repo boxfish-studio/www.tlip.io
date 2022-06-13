@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { activeSectionId, darkModeNavbar } from "$lib/store";
+    import { activeSectionId, lightModeNavbar } from "$lib/store";
     import Burger from "./burger.svelte";
     import Button from "./button.svelte";
     import type { Button as ButtonType } from "$lib/types/components";
@@ -30,9 +30,9 @@
 </script>
 
 <nav
-    class="fixed px-6 md:px-10 xl:container py-1 flex justify-between z-10 w-full bg-blur xl:max-w-none text-grey-600
+    class="fixed px-6 md:px-10 xl:container py-1 flex justify-between z-50 w-full bg-blur xl:max-w-none text-grey-600
     {classes}"
-    class:darkMode={!$darkModeNavbar && !sideMenuOpen}
+    class:lightMode={$lightModeNavbar && !sideMenuOpen}
 >
     <a href="/" class="py-4">
         <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -51,10 +51,13 @@
                                 <a
                                     href={id}
                                     on:click|preventDefault={onClick}
-                                    class="{id === "#" + $activeSectionId ? "highlight" : ''} hover:text-green-400">{title}</a
+                                    class="{id === '#' + $activeSectionId ? 'highlight' : ''} hover:text-green-400"
+                                    >{title}</a
                                 >
                             {:else if url || (id && url != $page.path)}
-                                <a href={url} class="{url === $page.path ? 'highlight' : ''} hover:text-green-400">{title}</a>
+                                <a href={url} class="{url === $page.path ? 'highlight' : ''} hover:text-green-400"
+                                    >{title}</a
+                                >
                             {/if}
                         </li>{/if}
                 {/each}
@@ -75,7 +78,7 @@
                             <li class="py-4 nav-link min-w-max">
                                 {#if id && url === $page.path}
                                     <a
-                                        class={id === "#" + $activeSectionId ? "highlight" : ''}
+                                        class={id === "#" + $activeSectionId ? "highlight" : ""}
                                         href={id}
                                         on:click|preventDefault={e => {
                                             onClick(e);
@@ -83,7 +86,7 @@
                                         }}>{title}</a
                                     >
                                 {:else if url || (id && url != $page.path)}
-                                    <a class={url === $page.path ? 'highlight' : ''} href={url}>{title}</a>
+                                    <a class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
                                 {/if}
                             </li>
                         {/if}
@@ -114,20 +117,20 @@
                 -webkit-backdrop-filter: blur(4px);
                 backdrop-filter: blur(4px);
             }
-            &.darkMode {
-                @apply text-white;
-                #logo {
-                    filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
-                }
+        }
+        &.lightMode {
+            @apply text-white;
+            #logo {
+                filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
             }
-            aside {
-                z-index: -1;
-                @apply w-0;
-                transition: width 0.3s ease-in-out;
-                &.open {
-                    @apply w-full;
-                    @apply whitespace-nowrap;
-                }
+        }
+        aside {
+            z-index: -1;
+            @apply w-0;
+            transition: width 0.3s ease-in-out;
+            &.open {
+                @apply w-full;
+                @apply whitespace-nowrap;
             }
         }
     }
