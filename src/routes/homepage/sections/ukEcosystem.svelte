@@ -4,7 +4,7 @@
     const HEADING: Heading = {
         title: "UK Ecosystem of Trust",
         description:
-            "TLIP has been selected by the UK Cabinet Office's Border Innovation Hub to pilot the infrastructure fortrade routes between UK, Africa and the EU."
+            "TLIP has been selected by the UK Cabinet Office's Border Innovation Hub to pilot the infrastructure for trade routes between UK, Africa and the EU."
     };
     const INFO: Heading = {
         title: "Example of a Trade Route Between the UK and the EU",
