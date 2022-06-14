@@ -70,3 +70,8 @@ p {
 
     @apply rounded;
 }
+
+p > ul {
+    list-style: disc;
+    margin-left: 16px;
+}

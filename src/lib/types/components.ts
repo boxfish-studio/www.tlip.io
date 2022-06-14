@@ -53,3 +53,44 @@ export interface Button {
  *
  */
 
+/**
+ *
+ */
+export interface Faqs {
+    /**
+     *
+     */
+    title?: string;
+
+    /**
+     *
+     */
+    description?: string;
+
+    /**
+     *
+     */
+    sections: FaqSection[];
+}
+
+/**
+ *
+ */
+interface FaqSection {
+    /**
+     *
+     */
+    id: string;
+    /**
+     *
+     */
+    title: string;
+    /**
+     *
+     */
+    description?: string;
+    /**
+     *
+     */
+    subsections?: FaqSection[];
+}
