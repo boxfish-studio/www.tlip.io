@@ -14,8 +14,8 @@
         background: linear-gradient(
             to bottom,
             #ffffff 0%,
-            #ffffff 30%,
-            rgba(86, 204, 242, 0.2) 20%,
+            #ffffff 10%,
+            rgba(86, 204, 242, 0.2) 5%,
             rgba(86, 204, 242, 0.2) 100%
         );
     }
