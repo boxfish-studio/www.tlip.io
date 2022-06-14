@@ -31,7 +31,7 @@
 
 <nav
     class="fixed py-1  z-50 w-full bg-blur  text-grey-600 {classes}"
-    class:lightMode={!$lightModeNavbar && !sideMenuOpen}
+    class:lightMode={$lightModeNavbar && !sideMenuOpen}
 >
     <div class="container flex justify-between">
         <a href="/" class="py-4">

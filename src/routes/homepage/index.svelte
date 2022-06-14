@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script lang="ts">
     import type { Section } from "$lib/types/components";
     import {
         Hero,
@@ -10,11 +10,6 @@
         WhoAreWe,
         UkEcosystem
     } from "./sections";
-
-    export const prerender: boolean = true;
-</script>
-
-<script lang="ts">
     import { ObservedRoute } from "../../components";
 
     const sections: Section[] = [
@@ -28,7 +23,8 @@
         },
         {
             component: WhyTLIP,
-            id: "WhyTLIP"
+            id: "WhyTLIP",
+            lightModeNavbar: true
         },
         {
             component: HowDoesTLIPWork,
@@ -40,11 +36,12 @@
         },
         {
             component: UkEcosystem,
-            id: "UkEcosystem"
+            id: "UkEcosystem",
+            lightModeNavbar: true
         },
         {
             component: Benefits,
-            id: "Benefits",
+            id: "Benefits"
         },
         {
             component: HaveAnyQuestions,
