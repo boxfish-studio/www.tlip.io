@@ -44,6 +44,9 @@
 </section>
 
 <style lang="scss">
+    section {
+        min-height: 800px;
+    }
     .background-image {
         z-index: -1;
     }

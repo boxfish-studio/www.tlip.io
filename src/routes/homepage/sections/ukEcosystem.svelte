@@ -13,7 +13,7 @@
     };
 </script>
 
-<section class="container bg-blue-500 pt-16 pb-20 rounded-md" {id}>
+<section class="container bg-blue-500 pt-16 pb-20 lg:rounded-md" {id}>
     <div class="flex flex-col text-white justify-center items-center relative">
         <h1 class="text-center mb-9">{HEADING.title}</h1>
         <p class="max-w-4xl text-center mb-7">{HEADING.description}</p>

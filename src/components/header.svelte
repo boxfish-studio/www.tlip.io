@@ -11,6 +11,8 @@
 
     let sideMenuOpen: boolean = false;
 
+    const bodyClassList = document.querySelector('body').classList
+
     const BUTTON: ButtonType = {
         title: "CONTACT US",
         url: "/contact",
@@ -23,9 +25,11 @@
     };
     const closeMenu = () => {
         sideMenuOpen = false;
+        bodyClassList.remove('overflow-y-hidden')
     };
     const openMenu = () => {
         sideMenuOpen = true;
+        bodyClassList.add('overflow-y-hidden')
     };
 </script>
 
@@ -64,14 +68,17 @@
                             </li>{/if}
                     {/each}
                 </ul>
+                <!-- Burger Icon -- Mobile  -->
+                <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} classes="flex my-auto lg:hidden" />
+            {/if}
+        </div>
+    </div>
+</nav>
 
-                <!-- Mobile -->
-                <div class="flex pt-3 lg:hidden">
-                    <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} />
-                </div>
-                <aside class="bg-green-200 h-screen w-0 absolute left-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
+<!-- Mobile Menu   -->
+ <aside class="bg-green-200 h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
                     <ul
-                        class="h-screen pt-20 px-10 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen
+                        class="container h-screen pt-20 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen
                             ? 'opacity-0'
                             : 'opacity-100'}"
                     >
@@ -95,12 +102,14 @@
                         {/each}
                     </ul>
                 </aside>
-            {/if}
-        </div>
-    </div>
-</nav>
 
 <style lang="scss">
+    aside {
+            transition: width 0.3s ease-in-out;
+            &.open {
+                @apply w-screen;
+            }
+        }
     nav {
         a {
             @apply transition-colors;
@@ -125,15 +134,6 @@
             @apply text-white;
             #logo {
                 filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
-            }
-        }
-        aside {
-            z-index: -1;
-            @apply w-0;
-            transition: width 0.3s ease-in-out;
-            &.open {
-                @apply w-full;
-                @apply whitespace-nowrap;
             }
         }
     }

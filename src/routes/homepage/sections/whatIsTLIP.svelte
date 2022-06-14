@@ -39,14 +39,14 @@
     ];
 </script>
 
-<section class="container mt-32 mb-36" {id}>
+<section class="container pt-32 pb-36" {id}>
     <h2 class="text-center text-36 mb-9">{HEADING.title}</h2>
     <p class="text-center leading-6 lg:px-52 tracking-0.04 mb-32">{HEADING.description}</p>
     {#each cards as { image, title, eyebrow, description }, idx}
         <div class="flex justify-center mb-24 md:mb-32 last:mb-0">
             <div class="flex flex-col md:flex-row justify-between">
-                <div class={`${idx % 2 ? "md:order-1" : "md:order-0"} mb-12 lg:mb-0 items-center flex w-full md:w-1/2`}>
-                    <img src="./assets/{image}" alt={title} class="image-shadow" />
+                <div class='{idx % 2 ? "md:order-1" : "md:order-0"} mb-12 lg:mb-0 items-center flex w-full md:w-1/2'>
+                    <img src="./assets/{image}" alt={title} class="image-shadow {idx % 2 ? 'ml-auto': 'mr-auto'}" />
                 </div>
                 <div
                     class={`w-full md:w-1/2 flex flex-col md:items-start items-center justify-center text-center md:text-left ${
