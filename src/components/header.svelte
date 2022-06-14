@@ -1,17 +1,15 @@
 <script lang="ts">
+    import type { Button as ButtonType } from "$lib/types/components";
+    import Button from "./button.svelte";
+    import Burger from "./burger.svelte";
     import { page } from "$app/stores";
     import { activeSectionId, lightModeNavbar } from "$lib/store";
-    import Burger from "./burger.svelte";
-    import Button from "./button.svelte";
-    import type { Button as ButtonType } from "$lib/types/components";
     export let items = [];
     export { classes as class };
 
     let classes: string = "";
 
     let sideMenuOpen: boolean = false;
-
-    const bodyClassList = document.querySelector('body').classList
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
@@ -25,20 +23,28 @@
     };
     const closeMenu = () => {
         sideMenuOpen = false;
-        bodyClassList.remove('overflow-y-hidden')
+        document.querySelector('body').classList.remove('overflow-y-hidden')
     };
     const openMenu = () => {
         sideMenuOpen = true;
-        bodyClassList.add('overflow-y-hidden')
+        document.querySelector('body').classList.add('overflow-y-hidden')
     };
+
+    const logoClick: (event: Event) => void = (e) => {
+        if ($page.path === '/') {
+            e.preventDefault()
+            document.body.scrollIntoView({behavior:'smooth'})
+            window.history.pushState(null, '', '/')
+        }
+    }
 </script>
 
 <nav
-    class="fixed py-1  z-50 w-full bg-blur  text-grey-600 {classes}"
+    class="fixed py-1 z-50 w-full bg-blur text-grey-600 {classes}"
     class:lightMode={$lightModeNavbar && !sideMenuOpen}
 >
     <div class="container flex justify-between">
-        <a href="/" class="py-4">
+        <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
         </a>
         <div class="order-3 my-auto hidden lg:inline-block">
@@ -53,9 +59,9 @@
                     {#each items as { title, url, id, onClick }}
                         {#if title}
                             <li class="shrink-0">
-                                {#if id && url === $page.path}
+                                {#if id && url.startsWith('/#')}
                                     <a
-                                        href={id}
+                                        href={url}
                                         on:click|preventDefault={onClick}
                                         class="{id === '#' + $activeSectionId ? 'highlight' : ''} hover:text-green-400"
                                         >{title}</a
