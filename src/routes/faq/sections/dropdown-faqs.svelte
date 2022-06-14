@@ -25,7 +25,14 @@
             </div>
             <div id={section.id} class="border border-grey-100 rounded-2xl bg-white py-5">
                 {#each section?.subsections as subsection}
-                    <div id={subsection.id} class="">
+                    <div
+                        id={subsection.id}
+                        class={`item relative ${
+                            section.subsections.lastIndexOf(subsection) === section?.subsections.length - 1
+                                ? "border-0"
+                                : "border-b border-grey-100"
+                        }`}
+                    >
                         <div
                             class={`mx-9 my-4 ${isExpandable ? "cursor-pointer" : ""} `}
                             on:click={() => handleClick(subsection.id)}
@@ -33,7 +40,9 @@
                             <div
                                 class={`flex justify-between items-center w-full  ${index} ${section.subsections.length}`}
                             >
-                                <span id={subsection.id} class="text-28 leading-110 tracking-0.02 font-bold"
+                                <span
+                                    id={subsection.id}
+                                    class="text-28 leading-110 tracking-0.02 font-bold text-blue-400"
                                     >{@html subsection.title}</span
                                 ><br /><br />
                                 {#if isExpandable}
@@ -82,7 +91,12 @@
         max-height: 1200px;
         @apply py-9;
     }
-    .items:last-child {
-        border-bottom: 0;
-    }
+    /* .item::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        border-bottom: 1px solid red;
+    } */
 </style>
