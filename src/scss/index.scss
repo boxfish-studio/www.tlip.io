@@ -1,13 +1,16 @@
-// $font-path: "https://webassets.iota.org/fonts/" !default;
-// @import "./fonts.scss";
+$font-path: "https://webassets.iota.org/fonts/" !default;
+@import "./../../static/fonts/inter.scss";
+@import "./../../static/fonts/metropolis.scss";
 
-// $fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-//     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-// $metropolis: "Metropolis", $fallback-fonts;
-// $metropolis-light: "Metropolis Light", $fallback-fonts;
-// $metropolis-medium: "Metropolis Medium", $fallback-fonts;
-// $metropolis-semi-bold: "Metropolis Semi Bold", $fallback-fonts;
-// $metropolis-bold: "Metropolis Bold", $fallback-fonts;
+$fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$metropolis: "Metropolis", $fallback-fonts;
+$metropolis-light: "Metropolis Light", $fallback-fonts;
+$metropolis-medium: "Metropolis Medium", $fallback-fonts;
+$metropolis-semi-bold: "Metropolis Semi Bold", $fallback-fonts;
+$metropolis-bold: "Metropolis Bold", $fallback-fonts;
+
+$inter: "Inter", $fallback-fonts;
 
 @tailwind components;
 @tailwind base;
@@ -16,15 +19,15 @@
 html,
 body,
 #svelte {
-    // font-family: "Metropolis Medium";
+    font-family: "Metropolis medium", sans-serif;
 
     @apply h-full;
 }
 
 h1 {
     @apply text-32;
-    @apply font-bold;
     @apply leading-130;
+    font-family: "Metropolis bold";
 
     @screen lg {
         @apply text-48;
@@ -33,8 +36,8 @@ h1 {
 
 h2 {
     @apply text-28;
-    @apply font-bold;
     @apply leading-110;
+    font-family: "Metropolis bold";
 
     @screen lg {
         @apply text-40;
@@ -42,9 +45,9 @@ h2 {
 }
 
 h3 {
-    @apply font-bold;
     @apply text-24;
     @apply leading-125;
+    font-family: "Metropolis bold";
 
     @screen lg {
         @apply text-32;
