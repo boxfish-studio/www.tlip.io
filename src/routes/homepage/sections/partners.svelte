@@ -11,7 +11,7 @@
         <h4 class="font-bold mb-10 text-center">{GOVERNMENT_PARTNERS.title}</h4>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 w-full justify-items-center">
             {#each GOVERNMENT_PARTNERS.logos as logo}
-                <div class="w-28 md:w-36 h-28 md:h-36 border border-grey-100 rounded p-4">
+                <div class="w-36 h-36 border border-grey-100 rounded p-4">
                     <img src={logo} alt={logo} class="w-full h-full object-contain" />
                 </div>
             {/each}
@@ -21,21 +21,23 @@
     <Swiper
         breakpoints={{
             580: {
-                slidesPerView: 3
+                slidesPerView: 2
             },
             750: {
                 slidesPerView: 4
             },
             960: {
-                slidesPerView: 6
+                slidesPerView: 5
             },
             1200: {
+                slidesPerView: 6
+            },
+            1600: {
                 slidesPerView: 8
             }
         }}
         slidesPerView={2}
         spaceBetween={30}
-        slidesPerGroup={3}
         loop={true}
         autoplay={true}
         class="mySwiper"
@@ -43,7 +45,7 @@
     >
         {#each COMMERCIAL_PARTNERS.logos as logo}
             <SwiperSlide>
-                <div class="w-36 h-36 border border-grey-100 rounded p-4">
+                <div class="w-36 h-36 border border-grey-100 rounded p-4 mx-auto">
                     <img src={logo} alt={logo} class="w-full h-full object-contain" />
                 </div>
             </SwiperSlide>

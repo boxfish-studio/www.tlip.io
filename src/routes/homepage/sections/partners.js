@@ -47,6 +47,7 @@ export const COMMERCIAL_PARTNERS = {
     "/assets/partners/forum-future-logo.png",
     "/assets/partners/DP-world-logo.png",
     "/assets/partners/CNSI-logo.png",
-    "/assets/partners/OLAM-logo.png"
+    "/assets/partners/OLAM-logo.png",
+    "/assets/partners/meatco-logo.png"
   ]
 };
