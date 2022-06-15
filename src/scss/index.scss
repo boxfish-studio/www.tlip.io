@@ -67,12 +67,17 @@ p {
 
 .image-shadow {
     box-shadow: 5px 5px 0px 2px #333333;
-
     @apply rounded;
 }
 
-.swiper {
-    width: 100%;
+.swiper-block {
     max-width: 1600px;
+}
+
+.swiper {
     height: 100%;
+    width: 100%;
+    .swiper-slide {
+        @apply w-auto;
+    }
 }
