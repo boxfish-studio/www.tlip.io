@@ -91,17 +91,17 @@
                         {#each items as { title, url, id, onClick }}
                             {#if title}
                                 <li class="py-4 nav-link min-w-max">
-                                    {#if id && url === $page.path}
+                                    {#if id && url.startsWith('/#')}
                                         <a
                                             class={id === "#" + $activeSectionId ? "highlight" : ""}
-                                            href={id}
+                                            href={url}
                                             on:click|preventDefault={e => {
                                                 onClick(e);
                                                 closeMenu();
                                             }}>{title}</a
                                         >
                                     {:else if url || (id && url != $page.path)}
-                                        <a class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                                        <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
                                     {/if}
                                 </li>
                             {/if}
