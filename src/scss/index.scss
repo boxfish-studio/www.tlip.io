@@ -71,8 +71,8 @@ p {
     @apply rounded;
 }
 
-p > ol {
-    list-style: decimal;
+p > ul {
+    list-style: disc;
     margin-left: 20px;
     li:not(:last-of-type) {
         margin-bottom: 10px;
