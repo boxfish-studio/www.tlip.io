@@ -1,4 +1,5 @@
 export { default as Hero } from "./hero.svelte";
+export { default as Partners } from "./partners.svelte";
 export { default as HaveAnyQuestions } from "../../../sections/haveAnyQuestions.svelte";
 export { default as WhatIsTLIP } from "./whatIsTLIP.svelte";
 export { default as WhyTLIP } from "./whyTLIP.svelte";

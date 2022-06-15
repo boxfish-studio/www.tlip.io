@@ -2,6 +2,7 @@
     import type { Section } from "$lib/types/components";
     import {
         Hero,
+        Partners,
         HaveAnyQuestions,
         WhatIsTLIP,
         WhyTLIP,
@@ -16,6 +17,10 @@
         {
             component: Hero,
             id: "hero"
+        },
+        {
+            component: Partners,
+            id: "partners"
         },
         {
             component: WhatIsTLIP,

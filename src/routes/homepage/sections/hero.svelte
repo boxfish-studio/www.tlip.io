@@ -19,7 +19,7 @@
     ];
 </script>
 
-<section class="bg-green-200 w-full h-screen relative py-44 z-20" {id}>
+<section class="bg-green-200 w-full h-full relative py-44 z-20" {id}>
     <img
         src="/assets/background-hero.png"
         alt="background"
