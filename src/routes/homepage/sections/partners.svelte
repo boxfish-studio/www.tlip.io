@@ -38,7 +38,6 @@
         slidesPerGroup={3}
         loop={true}
         autoplay={true}
-        loopFillGroupWithBlank={true}
         class="mySwiper"
         modules={[Autoplay]}
     >
