@@ -36,7 +36,7 @@
     <meta name="keywords" content="TLIP,Trademark, TMEA" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={`${PROTOCOL}${$page.host}${METADATA.image}`} />
-    <meta property="og:url" content={`${PROTOCOL}$page.host}`} />
+    <meta property="og:url" content={`${PROTOCOL}${$page.host}`} />
     <meta property="og:title" content={METADATA.title} />
     <meta property="og:description" content={METADATA.description} />
     <meta property="twitter:card" content="summary" />
