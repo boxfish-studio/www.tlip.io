@@ -2,61 +2,61 @@
 /* eslint-disable jsdoc/require-jsdoc */
 
 const whatIsImpact = `
-- TLIP enables a transparent, efficient and cost-effective way of managing trade information across borders. It allows for trade processes to become paperless and fully digital.
-- TLIP will create trust and visibility along the trade supply chains as actors can securely exchange information in a digital format.
-- TLIP supports WTO’s Trade Facilitation Agreement and the ambition to make cross-border trade processes more efficient-both in terms of saved time and cost.
-- The impact of TLIP is to make East African exports more competitive through building efficiencies around information generation, transmission and storage. TLIP will link the East African trading community to the global trade supply chain in a way that gives the region and its trading partners access to the critical information required to make informed decisions well in advance of the arrival of physical goods.
+1. TLIP enables a transparent, efficient and cost-effective way of managing trade information across borders. It allows for trade processes to become paperless and fully digital.
+2. TLIP will create trust and visibility along the trade supply chains as actors can securely exchange information in a digital format.
+3. TLIP supports WTO’s Trade Facilitation Agreement and the ambition to make cross-border trade processes more efficient-both in terms of saved time and cost.
+4. The impact of TLIP is to make East African exports more competitive through building efficiencies around information generation, transmission and storage. TLIP will link the East African trading community to the global trade supply chain in a way that gives the region and its trading partners access to the critical information required to make informed decisions well in advance of the arrival of physical goods.
 `;
 
 const whyWasInitiated = `
-- International trade is an information-intensive process, involving hundreds of data points and multiple information exchanges between traders, transporters and border authorities. Most information exchanged throughout the journey of a single product is paper-based, making it unsustainable, expensive, slow, error-prone and inefficient. The TLIP project was initiated to tackle problems associated with paper-based information sharing and to increase the transparency, efficiency and sustainability of international trade.
-- TLIP’s vision is to enhance the international competitiveness of all East African traders by digitizing and covering the end-to-end trade-data journey to save time, cost, errors and lost documents.
+1. International trade is an information-intensive process, involving hundreds of data points and multiple information exchanges between traders, transporters and border authorities. Most information exchanged throughout the journey of a single product is paper-based, making it unsustainable, expensive, slow, error-prone and inefficient. The TLIP project was initiated to tackle problems associated with paper-based information sharing and to increase the transparency, efficiency and sustainability of international trade.
+2. TLIP’s vision is to enhance the international competitiveness of all East African traders by digitizing and covering the end-to-end trade-data journey to save time, cost, errors and lost documents.
 `;
 
 const howIsOrganized = `
-- TLIP was initiated by TradeMark East Africa and the initial stages of development and implementation are done by a team consisting of experts from TradeMark East Africa and the IOTA Foundation.
-- As the TLIP moves from testing and learning into production, the aim is to anchor the project with relevant government bodies in the target countries such as Uganda, Kenya, Rwanda and Tanzania for the first phase.
-- A Technical Working Group, representing both public and private entities, has been established to oversee and provide feedback during the project.
+1. TLIP was initiated by TradeMark East Africa and the initial stages of development and implementation are done by a team consisting of experts from TradeMark East Africa and the IOTA Foundation.
+2. As the TLIP moves from testing and learning into production, the aim is to anchor the project with relevant government bodies in the target countries such as Uganda, Kenya, Rwanda and Tanzania for the first phase.
+3. A Technical Working Group, representing both public and private entities, has been established to oversee and provide feedback during the project.
 `;
 
 const howWillGrow = `
-- TLIP is currently being tested for selected tradelanes and commodities such as flowers, fish, tea and textiles As new tradelanes and commodities are added, TLIP will partner with the relevant government agencies, trade associations and traders to build out new features.
-- We plan to pilot TLIP across Kenya, Uganda, Rwanda and Tanzania to establish integrations with relevant border agencies for secure data exchange. Furthermore, different destination markets will be involved in accepting digital certificates for the commodities involved in TLIP.
-- Further, TLIP has been selected by the UK Border Innovation Team under Cabinet Office for pilots on export/import with the UK during 2022.
-- The aim is to establish TLIP as the public system, starting in the East African Community and the UK, for the exchange of trade data and certificates. Piloting across different trade lanes and commodities enables a robust system to be built that over time can cover all trade lanes and commodities.
+1. TLIP is currently being tested for selected tradelanes and commodities such as flowers, fish, tea and textiles As new tradelanes and commodities are added, TLIP will partner with the relevant government agencies, trade associations and traders to build out new features.
+2. We plan to pilot TLIP across Kenya, Uganda, Rwanda and Tanzania to establish integrations with relevant border agencies for secure data exchange. Furthermore, different destination markets will be involved in accepting digital certificates for the commodities involved in TLIP.
+3. Further, TLIP has been selected by the UK Border Innovation Team under Cabinet Office for pilots on export/import with the UK during 2022.
+4. The aim is to establish TLIP as the public system, starting in the East African Community and the UK, for the exchange of trade data and certificates. Piloting across different trade lanes and commodities enables a robust system to be built that over time can cover all trade lanes and commodities.
 `;
 
 const whoOwns = `
-- Currently TLIP is anchored as an innovation project under TradeMark East Africa.
-- TLIP will become a public infrastructure for government agencies to exchange information with both foreign customs authorities and with traders, transporters and other private actors. As the system transitions into production mode, relevant government institutions will host the system to ensure it is compliant with national legislation and public service principles.
+1. Currently TLIP is anchored as an innovation project under TradeMark East Africa.
+2. TLIP will become a public infrastructure for government agencies to exchange information with both foreign customs authorities and with traders, transporters and other private actors. As the system transitions into production mode, relevant government institutions will host the system to ensure it is compliant with national legislation and public service principles.
 `;
 
 const whoUses = `
-- Once TLIP is in full production, it is available to anybody who needs to share trade information to ensure goods get from A to B. This involves traders from various industries, border authorities, transporters and freight providers.
-- Currently, TLIP is in testing and pilot stage, with the goal of building the right integrations with border agencies in East Africa, ensuring a high quality user experience and delivering the envisioned impact.
-- A number of tradelanes/commodities have been preselected for the testing phase including Flowers, Fish, Tea, Rice, Livestock, Seeds and Textiles - more will likely follow.
+1. Once TLIP is in full production, it is available to anybody who needs to share trade information to ensure goods get from A to B. This involves traders from various industries, border authorities, transporters and freight providers.
+2. Currently, TLIP is in testing and pilot stage, with the goal of building the right integrations with border agencies in East Africa, ensuring a high quality user experience and delivering the envisioned impact.
+3. A number of tradelanes/commodities have been preselected for the testing phase including Flowers, Fish, Tea, Rice, Livestock, Seeds and Textiles - more will likely follow.
 `;
 
 const whyUsesIOTA = `
-- The TLIP project uses the IOTA DLT because it is highly scalable, energy-efficient and does not require the use of a cryptocurrency. IOTA is an open-source technology so that TLIP can be developed, maintained and serviced by any skillful technology consultancy.
-- TradeMark East Africa has partnered with the IOTA Foundation in order to establish TLIP. The IOTA Foundation is a not-for-profit organisation registered in Germany that is paid on a consultancy-based fee structure to support building TLIP.
+1. The TLIP project uses the IOTA DLT because it is highly scalable, energy-efficient and does not require the use of a cryptocurrency. IOTA is an open-source technology so that TLIP can be developed, maintained and serviced by any skillful technology consultancy.
+2. TradeMark East Africa has partnered with the IOTA Foundation in order to establish TLIP. The IOTA Foundation is a not-for-profit organisation registered in Germany that is paid on a consultancy-based fee structure to support building TLIP.
 `;
 
 const whyIsDLTImportant = `
-- DLT (such as blockchain) is a technology that can ensure the immutability and integrity of digital data. It performs the same function as a government stamp on a trade certificate. Digital certificates shared using DLT can be trusted to be authentic and cannot be tampered with at a later stage. DLT provides the security and auditability of trade certification to be shared through the TLIP system alone. For example, customs in destination markets will not need a stamped physical Certificate of Origin when using TLIP.
-- Furthermore, DLT enables parties to interact securely online without requiring a centralised platform that stores all information and is vulnerable to hacking or manipulation.
+1. DLT (such as blockchain) is a technology that can ensure the immutability and integrity of digital data. It performs the same function as a government stamp on a trade certificate. Digital certificates shared using DLT can be trusted to be authentic and cannot be tampered with at a later stage. DLT provides the security and auditability of trade certification to be shared through the TLIP system alone. For example, customs in destination markets will not need a stamped physical Certificate of Origin when using TLIP.
+2. Furthermore, DLT enables parties to interact securely online without requiring a centralised platform that stores all information and is vulnerable to hacking or manipulation.
 `;
 
 const whatCostToUse = `
-- Currently TLIP is in an innovation project and any costs associated with testing and using the system are covered by participating donor organizations.
-- Potential future fees for using TLIP will be decided on by the relevant government agencies in each participating country.
-- The total cost of trade is expected to decline as TLIP becomes the standard for cross-border trade processes.
+1. Currently TLIP is in an innovation project and any costs associated with testing and using the system are covered by participating donor organizations.
+2. Potential future fees for using TLIP will be decided on by the relevant government agencies in each participating country.
+3. The total cost of trade is expected to decline as TLIP becomes the standard for cross-border trade processes.
 `;
 
 const investNewTechnology = `
-- Private actors such as traders, forwarders and transporters can access TLIP via a normal browser on both PCs and mobile devices, using their secure login credentials. As such, no new investments are required. 
-- Government agencies participating in the TLIP network can share information through either a set of standard APIs or by establishing a tailored “TLIP bridge” that communicates with their internal systems and databases. Furthermore, government agencies are expected to run DLT nodes to ensure the data integrity that provides trust to the system and the information shared across it. Some establishment costs are to be expected and financial support is leveraged through TradeMark East Africa and participating donor countries.
-- Large corporations can also opt to use open APIs for integrating with their internal systems and thus ensure more automated workflows. Our long-term vision is to establish standard setup processes to connect with relevant ERP systems.
+1. Private actors such as traders, forwarders and transporters can access TLIP via a normal browser on both PCs and mobile devices, using their secure login credentials. As such, no new investments are required. 
+2. Government agencies participating in the TLIP network can share information through either a set of standard APIs or by establishing a tailored “TLIP bridge” that communicates with their internal systems and databases. Furthermore, government agencies are expected to run DLT nodes to ensure the data integrity that provides trust to the system and the information shared across it. Some establishment costs are to be expected and financial support is leveraged through TradeMark East Africa and participating donor countries.
+3. Large corporations can also opt to use open APIs for integrating with their internal systems and thus ensure more automated workflows. Our long-term vision is to establish standard setup processes to connect with relevant ERP systems.
 `;
 
 export const FAQS = {

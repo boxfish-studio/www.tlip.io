@@ -14,9 +14,11 @@
         background: linear-gradient(
             to bottom,
             #ffffff 0%,
-            #ffffff 30%,
-            rgba(86, 204, 242, 0.2) 20%,
-            rgba(86, 204, 242, 0.2) 100%
+            #ffffff 13%,
+            rgba(86, 204, 242, 0.2) 5%,
+            rgba(86, 204, 242, 0.2) 90%,
+            #ffffff 85%,
+            #ffffff 100%
         );
     }
 </style>

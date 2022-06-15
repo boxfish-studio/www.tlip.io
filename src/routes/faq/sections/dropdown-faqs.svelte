@@ -10,8 +10,8 @@
         if (isExpandable) {
             let _activeSubsectionIds = activeSubsectionIds;
             _activeSubsectionIds.includes(subsectionId)
-                ? _activeSubsectionIds.splice(activeSubsectionIds.indexOf(subsectionId), 1)
-                : _activeSubsectionIds.push(subsectionId);
+            ? _activeSubsectionIds.splice(activeSubsectionIds.indexOf(subsectionId), 1)
+            : _activeSubsectionIds.push(subsectionId);
             activeSubsectionIds = _activeSubsectionIds;
         }
     };
@@ -27,14 +27,14 @@
                 {#each section?.subsections as subsection}
                     <div
                         id={subsection.id}
-                        class={`item relative ${
+                        class={`item first:pb-5 first:pt-0 last:pt-5 last:pb-0 py-5 ${
                             section.subsections.lastIndexOf(subsection) === section?.subsections.length - 1
-                                ? "border-0"
-                                : "border-b border-grey-100"
+                                ? ""
+                                : "subsection-border relative"
                         }`}
                     >
                         <div
-                            class={`mx-9 my-4 ${isExpandable ? "cursor-pointer" : ""} `}
+                            class={`mx-9 my-2 ${isExpandable ? "cursor-pointer" : ""}`}
                             on:click={() => handleClick(subsection.id)}
                         >
                             <div
@@ -42,12 +42,12 @@
                             >
                                 <span
                                     id={subsection.id}
-                                    class="text-28 leading-110 tracking-0.02 font-bold text-blue-400"
+                                    class="text-20 lg:text-28 leading-110 tracking-0.02 font-bold -mb-2 {activeSubsectionIds.includes(subsection?.id) ? 'text-blue-400' : 'text-grey-600'}"
                                     >{@html subsection.title}</span
                                 ><br /><br />
                                 {#if isExpandable}
                                     <div
-                                        class="flex items-center justify-center relative ml-8 p-2.5 border border-grey-500 rounded-xl"
+                                        class="flex items-center justify-center relative ml-8 p-2.5 border {activeSubsectionIds.includes(subsection.id) ? 'border-blue-400' : 'border-grey-500'} rounded-xl"
                                     >
                                         <svg
                                             width="16"
@@ -65,14 +65,18 @@
                             </div>
                         </div>
 
-                        <p
+                        <div
                             class={`${
                                 isExpandable ? "max-h-0" : ""
-                            } px-9  overflow-hidden transition-all mt-2.5 text-grey-500`}
+                            } px-9 overflow-hidden transition-all text-grey-500`}
                             class:active={activeSubsectionIds.includes(subsection.id)}
                         >
-                            {@html marked(subsection.description)}
-                        </p>
+                            <p class="{
+                            activeSubsectionIds.includes(subsection.id)
+                                ? "bottom-border relative"
+                                : ""
+                        }">{@html marked(subsection.description)}</p>
+                    </div>
                     </div>
                 {/each}
             </div>
@@ -85,18 +89,32 @@
         &.dropdown {
             transform: rotate(180deg);
             transition: transform 0.2s ease-in-out;
+            path {
+                stroke: #2D7AA0;
+            }
         }
     }
     .active {
         max-height: 1200px;
         @apply py-9;
+        @apply mt-8;
+        @apply -mb-5;
     }
-    /* .item::before {
+     .bottom-border::before, .subsection-border::before {
         content: "";
         position: absolute;
-        bottom: 0;
+        @apply border-b;
+        @apply border-green-100;
+    }
+    .bottom-border::before {
         left: 0;
-        width: 80%;
-        border-bottom: 1px solid red;
-    } */
+        top: -36px;
+        width: 100%;
+    }
+    .subsection-border::before {
+        bottom: -2px;
+        left: 2.25rem;
+        /* 100% - margin-X child */
+        width: calc(100% - 4.5rem);
+    }
 </style>
