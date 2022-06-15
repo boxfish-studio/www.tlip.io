@@ -40,7 +40,7 @@
     <meta property="og:title" content={METADATA.title} />
     <meta property="og:description" content={METADATA.description} />
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:url" content={`${PROTOCOL}$page.host}`} />
+    <meta property="twitter:url" content={`${PROTOCOL}${$page.host}`} />
     <meta property="twitter:title" content={METADATA.title} />
     <meta property="twitter:description" content={METADATA.description} />
     <meta property="twitter:image" content={`${PROTOCOL}${$page.host}${METADATA.image}`} />
