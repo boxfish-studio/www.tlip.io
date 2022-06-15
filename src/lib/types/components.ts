@@ -56,7 +56,7 @@ export interface Button {
 /**
  *
  */
-export interface Faqs {
+export interface Faq {
     /**
      *
      */
@@ -76,7 +76,7 @@ export interface Faqs {
 /**
  *
  */
-interface FaqSection {
+export interface FaqSection {
     /**
      *
      */
