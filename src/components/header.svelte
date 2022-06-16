@@ -43,7 +43,7 @@
 
 <svelte:window bind:innerWidth />
 
-<nav class="fixed py-1 z-50 w-full  text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
+<nav class="fixed py-1 z-50 w-full text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -109,7 +109,7 @@
                 {/if}
             {/each}
         </ul>
-        <div class="flex mx-auto mb-10">
+        <div class="{sideMenuOpen ? 'flex' : 'hidden'} mx-auto mb-10">
             <Button {...BUTTON} classes="mx-auto" />
         </div>
     </div>
