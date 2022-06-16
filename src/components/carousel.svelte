@@ -20,7 +20,7 @@
         slidesPerView: "auto",
         spaceBetween: 40,
         centeredSlides: !staticCarousel,
-        centerInsufficientSlides: staticCarousel,
+        centerInsufficientSlides: true,
         class: "mySwiper",
         modules: [Autoplay, FreeMode],
         freeMode: {
