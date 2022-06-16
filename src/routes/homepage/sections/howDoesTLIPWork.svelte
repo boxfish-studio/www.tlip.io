@@ -52,7 +52,7 @@
         }
     ];
     const SEE_IN_ACTION = {
-        title: "See in Action",
+        title: "TLIP in Action",
         cards: [
             {
                 video: "https://files.iota.org/media/TLIP_Demo_Video.mp4",
@@ -71,11 +71,11 @@
 
 <section {id} class=" pt-16 lg:pt-40 pb-16 lg:pb-28">
     <div class="container">
-        <h2 class="mb-12 lg:mb-16 text-center ">{HEADINGS.title}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32">
+        <h2 class="mb-5 lg:mb-16 text-center ">{HEADINGS.title}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mb-16 md:mb-32">
             {#each CARDS as { title, description, icon }}
                 <Card classes="work bg-white" withBorder>
-                    <div slot="eyebrow" class="mb-6">
+                    <div slot="eyebrow" class="mb-4 md:mb-6">
                         <Icon {...icon} />
                     </div>
                     <h3 slot="title" class="tracking-0.02 mb-2 leading-110">{title}</h3>
@@ -86,15 +86,15 @@
             {/each}
         </div>
         <div>
-            <h3 class="tracking-0.02 mb-16 text-center leading-125">{SEE_IN_ACTION.title}</h3>
+            <h3 class="tracking-0.02 mb-5 md:mb-16 text-center leading-125">{SEE_IN_ACTION.title}</h3>
             <div class="flex flex-col lg:flex-row">
                 {#each SEE_IN_ACTION.cards as { title, video, description }}
-                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-16 lg:mb-0 h-full">
+                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-9 lg:mb-0 h-full">
                         <video class="h-full w-full object-cover image-shadow" muted controls preload="metadata">
                             <source src={video} type="video/mp4" />
                             <track kind="captions" />
                         </video>
-                        <h3 class="tracking-0.02 mb-4 leading-125 mt-6">{title}</h3>
+                        <h3 class="tracking-0.02 mb-3 md:mb-4 leading-125 mt-5 md:mt-6">{title}</h3>
                         <p>{description}</p>
                     </div>
                 {/each}
