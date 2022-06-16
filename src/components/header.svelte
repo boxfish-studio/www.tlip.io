@@ -44,7 +44,7 @@
 <svelte:window bind:innerWidth />
 
 <nav class="fixed py-1 z-50 w-full text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
-    <div class="container flex justify-between">
+    <div class="container flex justify-between md:px-4 md:max-w-none lg:px-10 xl:px-24 2xl:container">
         <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
         </a>
@@ -55,7 +55,7 @@
             {#if items}
                 <!-- Desktop -->
                 <ul
-                    class="flex-row items-center md:space-x-2 lg:space-x-3 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
+                    class="flex-row items-center md:space-x-2 lg:space-x-4 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
                 >
                     {#each items as { title, url, id, onClick }}
                         {#if title}
