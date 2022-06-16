@@ -5,7 +5,7 @@
     const HEADING: Heading = {
         title: "What is TLIP?",
         description:
-            "It is not a platform but a collaborative infrastructure, where all actors can share data and documents. Used by both border agencies and commercial actors, each party has full control of its own data, and all data available directly from the source."
+            "TLIP is a collaborative infrastructure, where all actors can share data and documents. Used by both border agencies and commercial actors, each party has full control of its own data, and all data is available directly from the source."
     };
     const cards = [
         {
@@ -45,8 +45,8 @@
     {#each cards as { image, title, eyebrow, description }, idx}
         <div class="flex justify-center mb-24 md:mb-32 last:mb-0">
             <div class="flex flex-col md:flex-row justify-between">
-                <div class='{idx % 2 ? "md:order-1" : "md:order-0"} mb-12 lg:mb-0 items-center flex w-full md:w-1/2'>
-                    <img src="./assets/{image}" alt={title} class="image-shadow {idx % 2 ? 'ml-auto': 'mr-auto'}" />
+                <div class="{idx % 2 ? 'md:order-1' : 'md:order-0'} mb-12 lg:mb-0 items-center flex w-full md:w-1/2">
+                    <img src="./assets/{image}" alt={title} class="image-shadow {idx % 2 ? 'ml-auto' : 'mr-auto'}" />
                 </div>
                 <div
                     class={`w-full md:w-1/2 flex flex-col md:items-start items-center justify-center text-center md:text-left ${

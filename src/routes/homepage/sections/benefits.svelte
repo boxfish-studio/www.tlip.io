@@ -46,7 +46,7 @@
             {
                 title: "Data Accuracy",
                 description:
-                    "Digitization eliminates the need for repetitive entry of data sets making it possible to reuse data from source.",
+                    "Digitisation eliminates the need for repetitive entry of data sets making it possible to reuse data from source.",
                 icon: {
                     name: "accuracy"
                 }
