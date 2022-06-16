@@ -1,4 +1,4 @@
-export const GOVERNMENT_PARTNERS = {
+const GOVERNMENT_PARTNERS = {
   /**
    *
    */
@@ -15,7 +15,7 @@ export const GOVERNMENT_PARTNERS = {
   ]
 };
 
-export const COMMERCIAL_PARTNERS = {
+const COMMERCIAL_PARTNERS = {
   /**
    *
    */
@@ -51,3 +51,5 @@ export const COMMERCIAL_PARTNERS = {
     "/assets/partners/meatco-logo.png"
   ]
 };
+
+export const PARTNERS = [GOVERNMENT_PARTNERS, COMMERCIAL_PARTNERS];
