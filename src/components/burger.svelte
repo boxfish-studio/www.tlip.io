@@ -19,7 +19,7 @@
     </svg>
 </button>
 
-<style>
+<style lang="scss">
     line {
         transition: color 0.3s ease-in-out;
         stroke-width: 3px;
@@ -29,14 +29,14 @@
     }
     .open {
         transform: scaleX(0.75rem);
-    }
-    .open .top {
-        transform: translateX(0.5rem) translateY(0rem) rotate(45deg);
-    }
-    .open .middle {
-        display: none;
-    }
-    .open .bottom {
-        transform: translateX(-0.5rem) translateY(0.325rem) rotate(-45deg);
+        .top {
+            transform: translateX(0.5rem) translateY(0rem) rotate(45deg);
+        }
+        .middle {
+            @apply hidden;
+        }
+        .bottom {
+            transform: translateX(-0.5rem) translateY(0.325rem) rotate(-45deg);
+        }
     }
 </style>
