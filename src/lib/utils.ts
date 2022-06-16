@@ -59,12 +59,15 @@ export const scrollIntoView = ({ target }): ((event: Event) => void) => {
         if (!el) {
             goto(target.href, { noscroll: true })
                 .then(() => {
-                    document.querySelector(targetID).scrollIntoView({
+                    const element = document.querySelector(targetID);
+                    const yPos: number = element.getBoundingClientRect().y;
+                    window.scrollTo({
+                        top: yPos + 36,
                         behavior: "smooth"
                     });
                 })
                 .catch(() => []);
-            return;
+         return;
         }
         el.scrollIntoView({
             behavior: "smooth"

@@ -89,11 +89,13 @@
             <h3 class="tracking-0.02 mb-16 text-center leading-125">{SEE_IN_ACTION.title}</h3>
             <div class="flex flex-col lg:flex-row">
                 {#each SEE_IN_ACTION.cards as { title, video, description }}
-                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-16 lg:mb-0 h-full">
-                        <video class="h-full w-full object-cover image-shadow" muted controls preload="metadata">
-                            <source src={video} type="video/mp4" />
-                            <track kind="captions" />
-                        </video>
+                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-16 lg:mb-0">
+                        <div class="video-block w-full relative">
+                            <video class="h-full w-full object-cover image-shadow absolute" width="585" height="329" muted controls preload="metadata">
+                                <source src={video} type="video/mp4" />
+                                <track kind="captions" />
+                            </video>
+                        </div>
                         <h3 class="tracking-0.02 mb-4 leading-125 mt-6">{title}</h3>
                         <p>{description}</p>
                     </div>
@@ -104,6 +106,9 @@
 </section>
 
 <style lang="scss">
+    :global(.video-block) {
+        padding-bottom: 56.23%;
+    }
     section {
         background: linear-gradient(
             to bottom,
