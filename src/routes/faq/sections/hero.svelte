@@ -9,7 +9,7 @@
     <img
         src="/assets/background-hero.png"
         alt="background"
-        class="absolute -bottom-12 md:-bottom-60 right-0  z-0 background-image"
+        class="background-image absolute -bottom-12 md:-bottom-60 right-0"
     />
     <div class="container">
         <div class="text-white flex flex-col w-full h-full z-10">

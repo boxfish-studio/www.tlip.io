@@ -15,7 +15,6 @@
     <div class="cursor-pointer" on:click={handleClick}>
         <div class={`flex justify-between items-center w-full`}>
             <span
-                {id}
                 class="text-20 lg:text-28 leading-120 md:leading-110 tracking-0.02 font-semibold md:font-bold {active
                     ? 'text-blue-400'
                     : 'text-grey-600'}">{@html title}</span

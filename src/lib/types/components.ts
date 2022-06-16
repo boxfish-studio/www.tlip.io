@@ -88,7 +88,7 @@ export interface FaqSection {
     /**
      *
      */
-    description?: string;
+    description: string;
     /**
      *
      */

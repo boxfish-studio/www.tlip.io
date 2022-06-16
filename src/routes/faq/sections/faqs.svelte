@@ -16,8 +16,8 @@
                         {section.title}
                     </div>
                     <div id={section.id} class="border border-grey-100 rounded-2xl bg-white p-7 md:p-9">
-                        {#each section.subsections as { id, title, description }, index}
-                            <Accordion {id} {title} {description} />
+                        {#each section.subsections as faq, index}
+                            <Accordion {...faq} />
                             {#if index != section.subsections.length - 1}
                                 <hr class="my-6 md:my-9" />
                             {/if}
