@@ -67,8 +67,8 @@
     };
 </script>
 
-<section {id}>
-    <div class="container pt-24 lg:pt-40 pb-16 lg:pb-32">
+<section {id} class=" pt-16 lg:pt-40 pb-16 lg:pb-28">
+    <div class="container">
         <h2 class="mb-12 lg:mb-16 text-center ">{HEADINGS.title}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32">
             {#each CARDS as { title, description, icon }}
@@ -87,7 +87,7 @@
             <h3 class="tracking-0.02 mb-16 text-center leading-125">{SEE_IN_ACTION.title}</h3>
             <div class="flex flex-col lg:flex-row">
                 {#each SEE_IN_ACTION.cards as { title, video, description }}
-                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-16 lg:mb-0">
+                    <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-16 lg:mb-0 h-full">
                         <video class="h-full w-full object-cover image-shadow" muted controls preload="metadata">
                             <source src={video} type="video/mp4" />
                             <track kind="captions" />
