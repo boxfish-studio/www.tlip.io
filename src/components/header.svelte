@@ -39,12 +39,11 @@
             window.history.pushState(null, "", "/");
         }
     };
-
 </script>
 
-<svelte:window bind:innerWidth/>
+<svelte:window bind:innerWidth />
 
-<nav class="fixed py-1 z-50 w-full border-b border-grey-100 bg-white text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
+<nav class="fixed py-1 z-50 w-full  text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -52,7 +51,7 @@
         <div class="order-3 my-auto hidden lg:inline-block">
             <Button {...BUTTON} />
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-row items-center justify-center">
             {#if items}
                 <!-- Desktop -->
                 <ul
@@ -84,7 +83,7 @@
 </nav>
 
 <!-- Mobile Menu   -->
-<aside class="bg-white h-screen py-7 w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
+<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
     <ul
         class="container h-auto pt-20 text-black border-t-2 w-full transition-opacity duration-400 relative {!sideMenuOpen
             ? 'opacity-0 hidden'
@@ -109,7 +108,7 @@
             {/if}
         {/each}
     </ul>
-    <div class="absolute bottom-0 w-full flex mb-8 {sideMenuOpen ? 'inline-block':'hidden'}">
+    <div class="absolute bottom-0 w-full flex mb-8 {sideMenuOpen ? 'inline-block' : 'hidden'}">
         <Button {...BUTTON} classes="mx-auto" />
     </div>
 </aside>
@@ -122,7 +121,6 @@
         }
     }
     nav {
-        @apply bg-white;
         a {
             @apply transition-colors;
             @apply duration-150;
@@ -130,17 +128,16 @@
         .highlight {
             @apply font-bold;
         }
-        @screen lg {
-            @apply border-0;
+        &.bg-blur {
             @apply bg-grey-100;
             @apply bg-opacity-20;
-            /* if backdrop support: transparent and blurred */
-            @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
-                    @apply bg-transparent;
-                    -webkit-backdrop-filter: blur(4px);
-                    backdrop-filter: blur(4px);
-            }
         }
+        @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+            @apply bg-transparent;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+
         &.lightMode {
             @apply text-white;
             #logo {
