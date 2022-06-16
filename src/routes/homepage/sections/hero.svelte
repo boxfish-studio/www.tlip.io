@@ -18,17 +18,17 @@
     ];
 </script>
 
-<section class="bg-green-200 w-full h-full relative py-44 z-20" {id}>
+<section class="bg-green-200 w-full h-full relative pt-28 pb-14 lg:pt-40 lg:pb-28 z-20 overflow-hidden" {id}>
     <img
         src="/assets/background-hero.png"
         alt="background"
         class="absolute bottom-0 right-0 lg:w-4/5 lg:h-2/3 z-0 background-image"
     />
     <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full z-10">
-        <div class="w-full lg:w-1/2 lg:mr-36">
+        <div class="w-full text-center lg:text-left lg:w-1/2 lg:mr-36">
             <h1 class="mb-6">{HEADING.title}</h1>
             <h4 class="text-grey-500">{HEADING.description}</h4>
-            <div class="flex mt-12 lg:mt-10 lg:mb-0 mb-12">
+            <div class="flex justify-center lg:justify-start mt-6 lg:mt-10 lg:mb-0 mb-9">
                 {#each BUTTONS as button}
                     <div class="mr-6 last:mr-0 uppercase">
                         <Button {...button} />
@@ -47,7 +47,7 @@
 
 <style lang="scss">
     section {
-        min-height: 800px;
+        min-height: 680px;
     }
     .background-image {
         z-index: -1;
