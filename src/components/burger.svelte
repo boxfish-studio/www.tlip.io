@@ -13,10 +13,10 @@
 
 <button class="z-20 flex rounded-full {classes}" class:open on:click={onClick}>
     <svg width="32" height="32">
-        <line class="top" x1="0" y1="6" x2="24" y2="6" {stroke} stroke-current={stroke_current} {color} />
-        <line class="middle" x1="0" y1="11" x2="24" y2="11" {stroke} stroke-current={stroke_current} {color} />
-        <line class="middle" x1="0" y1="16" x2="24" y2="16" {stroke} stroke-current={stroke_current} {color} />
-        <line class="bottom " x1="0" y1="21" x2="24" y2="21" {stroke} stroke-current={stroke_current} {color} />
+        <line class="top" x1="4" y1="7" x2="28" y2="7" {stroke} stroke-current={stroke_current} {color} />
+        <line class="middle" x1="4" y1="13" x2="28" y2="13" {stroke} stroke-current={stroke_current} {color} />
+        <line class="middle" x1="4" y1="19" x2="28" y2="19" {stroke} stroke-current={stroke_current} {color} />
+        <line class="bottom " x1="4" y1="25" x2="28" y2="25" {stroke} stroke-current={stroke_current} {color} />
     </svg>
 </button>
 
@@ -31,13 +31,13 @@
     .open {
         transform: scaleX(0.75rem);
         .top {
-            transform: translateX(0.75rem) translateY(0.2rem) rotate(45deg);
+            transform: translateX(0.575rem) translateY(0rem) rotate(45deg);
         }
         .middle {
             @apply hidden;
         }
         .bottom {
-            transform: translateX(-0.44rem) translateY(0.60rem) rotate(-45deg);
+            transform: translateX(-0.84rem) translateY(0.625rem) rotate(-45deg);
         }
     }
 </style>
