@@ -29,7 +29,7 @@
         on:click={onClick}
         class:small
         class:secondary
-        class={`${classes} text-15 leading-6 tracking-0.02 px-8 py-4`}
+        class={`${classes} text-15 leading-6 tracking-0.02`}
         >{title}
     </button>
 {/if}
@@ -44,8 +44,9 @@
         @apply bg-green-500;
         @apply text-white;
         @apply rounded;
-        @apply px-8;
+        @apply px-9;
         @apply py-4;
+        @apply font-bold;
         &:hover {
             opacity: 0.8;
             transition: opacity 0.2s ease;
