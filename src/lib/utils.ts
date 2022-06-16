@@ -72,20 +72,3 @@ export const scrollIntoView = ({ target }): ((event: Event) => void) => {
         window.history.replaceState(null, "", targetID);
     }
 };
-
-/**
- * Adds controls to the video child element removes the play-button class.
- * @param event - On click event object.
- */
-export const playChildVideo = (event: Event): void => {
-    const target = event.target as HTMLElement;
-    if (target.tagName === "DIV") {
-        const video = target.children[0] as HTMLVideoElement;
-        if (video.tagName === "VIDEO" && !video.hasAttribute("controls")) {
-            const { classList } = target;
-            classList.remove("play-button");
-            video.setAttribute("controls", "true");
-            video.play().catch(() => []);
-        }
-    }
-};

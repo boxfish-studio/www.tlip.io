@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { Button } from "../../../components";
-    import { playChildVideo } from '$lib/utils'
+    import { Button, Video } from "../../../components";
     import type { Button as ButtonType } from "$lib/types/components";
     import type { Heading } from "$lib/types/sections";
 
@@ -38,11 +37,9 @@
                 {/each}
             </div>
         </div>
-        <div class="w-full lg:w-1/2 play-button" on:click={playChildVideo}>
-            <video class="h-full w-full object-cover image-shadow" muted preload="metadata">
-                <source src="https://files.iota.org/media/TLIP_Demo_Video.mp4" type="video/mp4" />
-                <track kind="captions" />
-            </video>
+        <div class="w-full lg:w-1/2 ">
+            <Video videoSource="https://files.iota.org/media/TLIP_Demo_Video.mp4" poster="/assets/poster-demo.png" />
+            <br />
         </div>
     </div>
 </section>
