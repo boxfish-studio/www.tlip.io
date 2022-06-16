@@ -1,0 +1,26 @@
+<script lang="ts">
+    const HEADING = {
+        title: "Frequent Asked Questions",
+        description: "Have questions? We are here to help."
+    };
+</script>
+
+<section class="bg-blue-300 w-full h-full relative pt-28 lg:pt-36 pb-20 lg:pb-28 z-20">
+    <img
+        src="/assets/background-hero.png"
+        alt="background"
+        class="background-image absolute -bottom-12 md:-bottom-60 right-0"
+    />
+    <div class="container">
+        <div class="text-white flex flex-col w-full h-full z-10">
+            <h1>{HEADING.title}</h1>
+            <p>{HEADING.description}</p>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .background-image {
+        z-index: -1;
+    }
+</style>

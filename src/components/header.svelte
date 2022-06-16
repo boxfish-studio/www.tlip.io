@@ -13,7 +13,7 @@
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
-        url: "/contact",
+        url: "mailto:tlip@iota.org",
         small: true,
         classes: "text-14"
     };
@@ -23,26 +23,23 @@
     };
     const closeMenu = () => {
         sideMenuOpen = false;
-        document.querySelector('body').classList.remove('overflow-y-hidden')
+        document.querySelector("body").classList.remove("overflow-y-hidden");
     };
     const openMenu = () => {
         sideMenuOpen = true;
-        document.querySelector('body').classList.add('overflow-y-hidden')
+        document.querySelector("body").classList.add("overflow-y-hidden");
     };
 
-    const logoClick: (event: Event) => void = (e) => {
-        if ($page.path === '/') {
-            e.preventDefault()
-            document.body.scrollIntoView({behavior:'smooth'})
-            window.history.pushState(null, '', '/')
+    const logoClick: (event: Event) => void = e => {
+        if ($page.path === "/") {
+            e.preventDefault();
+            document.body.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "/");
         }
-    }
+    };
 </script>
 
-<nav
-    class="fixed py-1 z-50 w-full bg-blur text-grey-600 {classes}"
-    class:lightMode={$lightModeNavbar && !sideMenuOpen}
->
+<nav class="fixed py-1 z-50 w-full bg-blur text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -59,7 +56,7 @@
                     {#each items as { title, url, id, onClick }}
                         {#if title}
                             <li class="shrink-0">
-                                {#if id && url.startsWith('/#')}
+                                {#if id && url.startsWith("/#")}
                                     <a
                                         href={url}
                                         on:click|preventDefault={onClick}
@@ -82,40 +79,40 @@
 </nav>
 
 <!-- Mobile Menu   -->
- <aside class="bg-green-200 h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
-                    <ul
-                        class="container h-screen pt-20 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen
-                            ? 'opacity-0'
-                            : 'opacity-100'}"
-                    >
-                        {#each items as { title, url, id, onClick }}
-                            {#if title}
-                                <li class="py-4 nav-link min-w-max">
-                                    {#if id && url.startsWith('/#')}
-                                        <a
-                                            class={id === "#" + $activeSectionId ? "highlight" : ""}
-                                            href={url}
-                                            on:click|preventDefault={e => {
-                                                onClick(e);
-                                                closeMenu();
-                                            }}>{title}</a
-                                        >
-                                    {:else if url || (id && url != $page.path)}
-                                        <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
-                                    {/if}
-                                </li>
-                            {/if}
-                        {/each}
-                    </ul>
-                </aside>
+<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
+    <ul
+        class="container h-screen pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
+            ? 'opacity-0 hidden'
+            : 'opacity-100 block'}"
+    >
+        {#each items as { title, url, id, onClick }}
+            {#if title}
+                <li class="py-4 nav-link min-w-max">
+                    {#if id && url.startsWith("/#")}
+                        <a
+                            class={id === "#" + $activeSectionId ? "highlight" : ""}
+                            href={url}
+                            on:click|preventDefault={e => {
+                                onClick(e);
+                                closeMenu();
+                            }}>{title}</a
+                        >
+                    {:else if url || (id && url != $page.path)}
+                        <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                    {/if}
+                </li>
+            {/if}
+        {/each}
+    </ul>
+</aside>
 
 <style lang="scss">
     aside {
-            transition: width 0.3s ease-in-out;
-            &.open {
-                @apply w-screen;
-            }
+        transition: width 0.25s ease-in-out;
+        &.open {
+            @apply w-screen;
         }
+    }
     nav {
         a {
             @apply transition-colors;

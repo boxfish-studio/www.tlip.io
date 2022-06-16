@@ -70,3 +70,19 @@ p {
 
     @apply rounded;
 }
+
+p > ul {
+    list-style: disc;
+    margin-left: 20px;
+    li:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+}
+
+p > ol {
+    list-style: decimal;
+    margin-left: 20px;
+    li:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+}
