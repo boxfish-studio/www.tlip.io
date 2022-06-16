@@ -8,6 +8,7 @@
     export { classes as class };
 
     let classes: string = "";
+    let innerWidth: number;
 
     let sideMenuOpen: boolean = false;
 
@@ -38,9 +39,12 @@
             window.history.pushState(null, "", "/");
         }
     };
+
 </script>
 
-<nav class="fixed py-1 z-50 w-full bg-blur text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
+<svelte:window bind:innerWidth/>
+
+<nav class="fixed py-1 z-50 w-full border-b border-grey-100 bg-white text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -80,9 +84,9 @@
 </nav>
 
 <!-- Mobile Menu   -->
-<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
+<aside class="bg-white h-screen py-7 w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
     <ul
-        class="container h-screen pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
+        class="container h-auto pt-20 text-black border-t-2 w-full transition-opacity duration-400 relative {!sideMenuOpen
             ? 'opacity-0 hidden'
             : 'opacity-100 block'}"
     >
@@ -105,6 +109,9 @@
             {/if}
         {/each}
     </ul>
+    <div class="absolute bottom-0 w-full flex mb-8 {sideMenuOpen ? 'inline-block':'hidden'}">
+        <Button {...BUTTON} classes="mx-auto" />
+    </div>
 </aside>
 
 <style lang="scss">
@@ -115,6 +122,7 @@
         }
     }
     nav {
+        @apply bg-white;
         a {
             @apply transition-colors;
             @apply duration-150;
@@ -122,16 +130,15 @@
         .highlight {
             @apply font-bold;
         }
-        &.bg-blur {
+        @screen lg {
+            @apply border-0;
             @apply bg-grey-100;
             @apply bg-opacity-20;
-        }
-        /* if backdrop support: transparent and blurred */
-        @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
-            &.bg-blur {
-                @apply bg-transparent;
-                -webkit-backdrop-filter: blur(4px);
-                backdrop-filter: blur(4px);
+            /* if backdrop support: transparent and blurred */
+            @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+                    @apply bg-transparent;
+                    -webkit-backdrop-filter: blur(4px);
+                    backdrop-filter: blur(4px);
             }
         }
         &.lightMode {
