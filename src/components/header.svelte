@@ -1,9 +1,9 @@
 <script lang="ts">
+    import type { Button as ButtonType } from "$lib/types/components";
+    import Button from "./button.svelte";
+    import Burger from "./burger.svelte";
     import { page } from "$app/stores";
     import { activeSectionId, lightModeNavbar } from "$lib/store";
-    import Burger from "./burger.svelte";
-    import Button from "./button.svelte";
-    import type { Button as ButtonType } from "$lib/types/components";
     export let items = [];
     export { classes as class };
 
@@ -13,9 +13,10 @@
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
-        url: "/contact",
+        url: "mailto:tlip@iota.org",
         small: true,
-        classes: "text-14"
+        classes: "text-14",
+        as: "link"
     };
 
     const toggleMenu: () => void = () => {
@@ -23,18 +24,25 @@
     };
     const closeMenu = () => {
         sideMenuOpen = false;
+        document.querySelector("body").classList.remove("overflow-y-hidden");
     };
     const openMenu = () => {
         sideMenuOpen = true;
+        document.querySelector("body").classList.add("overflow-y-hidden");
+    };
+
+    const logoClick: (event: Event) => void = e => {
+        if ($page.path === "/") {
+            e.preventDefault();
+            document.body.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "/");
+        }
     };
 </script>
 
-<nav
-    class="fixed py-1  z-50 w-full bg-blur  text-grey-600 {classes}"
-    class:lightMode={$lightModeNavbar && !sideMenuOpen}
->
+<nav class="fixed py-1 z-50 w-full bg-blur text-grey-600 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
     <div class="container flex justify-between">
-        <a href="/" class="py-4">
+        <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
         </a>
         <div class="order-3 my-auto hidden lg:inline-block">
@@ -49,9 +57,9 @@
                     {#each items as { title, url, id, onClick }}
                         {#if title}
                             <li class="shrink-0">
-                                {#if id && url === $page.path}
+                                {#if id && url.startsWith("/#")}
                                     <a
-                                        href={id}
+                                        href={url}
                                         on:click|preventDefault={onClick}
                                         class="{id === '#' + $activeSectionId ? 'highlight' : ''} hover:text-green-400"
                                         >{title}</a
@@ -64,43 +72,48 @@
                             </li>{/if}
                     {/each}
                 </ul>
-
-                <!-- Mobile -->
-                <div class="flex pt-3 lg:hidden">
-                    <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} />
-                </div>
-                <aside class="bg-green-200 h-screen w-0 absolute left-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
-                    <ul
-                        class="h-screen pt-20 px-10 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen
-                            ? 'opacity-0'
-                            : 'opacity-100'}"
-                    >
-                        {#each items as { title, url, id, onClick }}
-                            {#if title}
-                                <li class="py-4 nav-link min-w-max">
-                                    {#if id && url === $page.path}
-                                        <a
-                                            class={id === "#" + $activeSectionId ? "highlight" : ""}
-                                            href={id}
-                                            on:click|preventDefault={e => {
-                                                onClick(e);
-                                                closeMenu();
-                                            }}>{title}</a
-                                        >
-                                    {:else if url || (id && url != $page.path)}
-                                        <a class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
-                                    {/if}
-                                </li>
-                            {/if}
-                        {/each}
-                    </ul>
-                </aside>
+                <!-- Burger Icon -- Mobile  -->
+                <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} classes="flex my-auto lg:hidden" />
             {/if}
         </div>
     </div>
 </nav>
 
+<!-- Mobile Menu   -->
+<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
+    <ul
+        class="container h-screen pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
+            ? 'opacity-0 hidden'
+            : 'opacity-100 block'}"
+    >
+        {#each items as { title, url, id, onClick }}
+            {#if title}
+                <li class="py-4 nav-link min-w-max">
+                    {#if id && url.startsWith("/#")}
+                        <a
+                            class={id === "#" + $activeSectionId ? "highlight" : ""}
+                            href={url}
+                            on:click|preventDefault={e => {
+                                onClick(e);
+                                closeMenu();
+                            }}>{title}</a
+                        >
+                    {:else if url || (id && url != $page.path)}
+                        <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                    {/if}
+                </li>
+            {/if}
+        {/each}
+    </ul>
+</aside>
+
 <style lang="scss">
+    aside {
+        transition: width 0.25s ease-in-out;
+        &.open {
+            @apply w-screen;
+        }
+    }
     nav {
         a {
             @apply transition-colors;
@@ -125,15 +138,6 @@
             @apply text-white;
             #logo {
                 filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
-            }
-        }
-        aside {
-            z-index: -1;
-            @apply w-0;
-            transition: width 0.3s ease-in-out;
-            &.open {
-                @apply w-full;
-                @apply whitespace-nowrap;
             }
         }
     }

@@ -13,8 +13,7 @@
     const BUTTONS: ButtonType[] = [
         {
             title: "Contact us",
-            url: "https://www.iota.org/",
-            isExternal: true
+            url: "mailto:tlip@iota.org"
         }
     ];
 </script>
@@ -38,12 +37,18 @@
             </div>
         </div>
         <div class="w-full lg:w-1/2">
-            <img src="/assets/dummy-hero-image.png" alt="testing" class="image-shadow w-full" />
+            <video class="h-full w-full object-cover image-shadow" muted controls preload="metadata">
+                <source src="https://files.iota.org/media/TLIP_Demo_Video.mp4" type="video/mp4" />
+                <track kind="captions" />
+            </video>
         </div>
     </div>
 </section>
 
 <style lang="scss">
+    section {
+        min-height: 800px;
+    }
     .background-image {
         z-index: -1;
     }

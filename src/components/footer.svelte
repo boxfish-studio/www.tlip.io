@@ -9,17 +9,14 @@
     const footerLinks: LinkType[] = [
         {
             title: "Privacy Policy",
-            url: "/"
-        },
-        {
-            title: "Terms and Conditions",
-            url: "/"
+            url: "https://www.iota.org/privacy-policy",
+            isExternal: true
         }
     ];
 </script>
 
-<footer class="p-5 bg-grey-500 text-white w-full px-20 lg:px-32 {classes}">
-    <div class="flex flex-col text-center md:text-start md:flex-row w-full text-12">
+<footer class="py-5 bg-grey-500 text-white w-full {classes}">
+    <div class="container flex flex-col text-center md:text-start md:flex-row w-full text-12">
         <p class="md:min-w-max">&copy; {new Date().getFullYear()} TLIP.io All rights reserved.</p>
         <div class="flex flex-col mt-6 md:mt-0 md:flex-row w-full">
             {#each footerLinks as link}

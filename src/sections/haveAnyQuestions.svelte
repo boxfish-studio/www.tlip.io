@@ -11,15 +11,15 @@
         },
         {
             title: "Contact us",
-            url: "/"
+            url: "mailto:tlip@iota.org"
         }
     ];
 </script>
 
-<section class="px-6 md:px-32 py-20 bg-blue-300" {id}>
-    <div class="flex text-white justify-between flex-col text-center lg:flex-row lg:text-left">
+<section class="py-20 bg-blue-300" {id}>
+    <div class="container flex text-white justify-between flex-col text-center lg:flex-row lg:text-left">
         <div class="max-w-2xl lg:mr-7">
-            <h1 class="capitalize mb-6 flex text-36 md:text-64 justify-center">Have any questions?</h1>
+            <h1 class="capitalize mb-6 flex text-36 md:text-64 justify-center lg:justify-start">Have any questions?</h1>
             <p>
                 New to TLIP and got questions? Check out our FAQ or contact us by email, we will get back to you as soon
                 as we can.
