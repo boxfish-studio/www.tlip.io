@@ -10,14 +10,6 @@ export interface Link {
      * The url that the user will be redirected to.
      */
     url: string;
-    /**
-     * Adds the `a` tag `rel=”noopener noreferrer target="_blank"` if this property is true.
-     */
-    isExternal?: boolean;
-    /**
-     * The classes to be applied to the component.
-     */
-    classes?: string;
 }
 
 /**
