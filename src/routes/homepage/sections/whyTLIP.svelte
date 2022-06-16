@@ -1,6 +1,8 @@
 <script lang="ts">
     export let id: string;
-    const HEADINGS = {
+    import type { Heading } from "$lib/types/sections";
+
+    const HEADINGS: Heading = {
         title: "Why TLIP?",
         description:
             "Global trade today has a problem. Paper based trade documentation required for cross border exchange is slow, error prone and expensive."

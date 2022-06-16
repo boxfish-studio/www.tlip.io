@@ -31,5 +31,5 @@ export interface Heading {
     /**
      * Heading Description.
      */
-    description: string;
+    description?: string;
 }

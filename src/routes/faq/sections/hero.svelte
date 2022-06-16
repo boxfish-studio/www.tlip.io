@@ -1,5 +1,7 @@
 <script lang="ts">
-    const HEADING = {
+    import type { Heading } from "$lib/types/sections";
+
+    const HEADING: Heading = {
         title: "Frequent Asked Questions",
         description: "Have questions? We are here to help."
     };
