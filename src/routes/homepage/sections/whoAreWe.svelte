@@ -1,4 +1,6 @@
 <script lang="ts">
+    import type { Heading } from "$lib/types/sections";
+
     import { Icon, Card } from "../../../components";
 
     export let id: string;
@@ -23,13 +25,17 @@
             icon: "finance"
         }
     ];
+
+    const HEADING: Heading = {
+        title: "Who are We?"
+    };
 </script>
 
-<section class="container py-24" {id}>
-    <h1 class="mb-10 text-center xl:text-left">Who are We?</h1>
+<section class="container py-14 md:py-24" {id}>
+    <h1 class="mb-5 md:mb-10 text-left">{HEADING.title}</h1>
     <div class="flex flex-col xl:flex-row xl:gap-x-20">
-        <div class="mb-20 xl:mb-0 flex justify-center items-center">
-            <div class="w-full flex flex-col gap-y-4 ">
+        <div class="mb-7 md:mb-4 xl:mb-0 flex justify-center items-center">
+            <div class="w-full flex flex-col gap-y-7 md:gap-y-4 ">
                 {#each CARDS as { title, icon, description }}
                     <Card classes="" withBorder>
                         <div slot="eyebrow">
