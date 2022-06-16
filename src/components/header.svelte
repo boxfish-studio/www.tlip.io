@@ -13,9 +13,10 @@
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
-        url: "/contact",
+        url: "mailto:tlip@iota.org",
         small: true,
-        classes: "text-14"
+        classes: "text-14",
+        as: "link"
     };
 
     const toggleMenu: () => void = () => {

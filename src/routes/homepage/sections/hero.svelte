@@ -13,8 +13,7 @@
     const BUTTONS: ButtonType[] = [
         {
             title: "Contact us",
-            url: "https://www.iota.org/",
-            isExternal: true
+            url: "mailto:tlip@iota.org"
         }
     ];
 </script>

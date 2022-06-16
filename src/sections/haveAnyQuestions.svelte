@@ -11,7 +11,7 @@
         },
         {
             title: "Contact us",
-            url: "/"
+            url: "mailto:tlip@iota.org"
         }
     ];
 </script>
