@@ -9,11 +9,8 @@
     const footerLinks: LinkType[] = [
         {
             title: "Privacy Policy",
-            url: "/"
-        },
-        {
-            title: "Terms and Conditions",
-            url: "/"
+            url: "https://www.iota.org/privacy-policy",
+            isExternal: true
         }
     ];
 </script>
