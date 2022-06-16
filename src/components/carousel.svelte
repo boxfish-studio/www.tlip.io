@@ -18,10 +18,10 @@
 
     $: swiperOptions = {
         slidesPerView: "auto",
+        class:"mySwiper",
         spaceBetween: 40,
         centeredSlides: !staticCarousel,
         centerInsufficientSlides: true,
-        class: "mySwiper",
         modules: [Autoplay, FreeMode],
         freeMode: {
             enabled: !staticCarousel,
@@ -31,17 +31,15 @@
             momentumVelocityRatio: 0.4,
             minimumVelocity: 0
         },
-        preventClicks:true,
+        preventClicks: true,
         loop: !staticCarousel,
-        slideToClickedSlide:true,
+        slideToClickedSlide: true,
         speed: staticCarousel ? 0 : 2000,
         autoplay: {
             enabled: !staticCarousel,
             delay: 0,
             disableOnInteraction: false
         },
-        initialSlide: staticCarousel ? (images?.length/2) : 0,
-
     };
 </script>
 
@@ -49,8 +47,7 @@
 
 <div class="swiper-block" style="--max-width: {MAX_CAROUSEL_WIDTH}px;">
     {#key swiperOptions}
-        <Swiper {...swiperOptions}
-        >
+        <Swiper {...swiperOptions}>
             {#each images as image}
                 <SwiperSlide>
                     <div
@@ -74,10 +71,10 @@
         width: 100%;
     }
     :global(.swiper-block .swiper .swiper-slide) {
-        @apply w-auto;
+        @apply max-w-min;
     }
 
-    :global(.swiper-free-mode>.swiper-wrapper) {
+    :global(.swiper-free-mode > .swiper-wrapper) {
         transition-timing-function: linear;
-}
+    }
 </style>
