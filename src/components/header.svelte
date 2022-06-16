@@ -52,7 +52,7 @@
             {#if items}
                 <!-- Desktop -->
                 <ul
-                    class="flex-row items-center md:space-x-2 lg:space-x-4 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
+                    class="flex-row items-center md:space-x-2 lg:space-x-3 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
                 >
                     {#each items as { title, url, id, onClick }}
                         {#if title}
