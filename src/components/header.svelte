@@ -83,31 +83,34 @@
 </nav>
 
 <!-- Mobile Menu   -->
-<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap {sideMenuOpen ? 'open' : ''}">
-    <ul
-        class="container h-screen pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
-            ? 'opacity-0 hidden'
-            : 'opacity-100 block'}"
-    >
-        {#each items as { title, url, id, onClick }}
-            {#if title}
-                <li class="py-4 nav-link min-w-max">
-                    {#if id && url.startsWith("/#")}
-                        <a
-                            class={id === "#" + $activeSectionId ? "highlight" : ""}
-                            href={url}
-                            on:click|preventDefault={e => {
-                                onClick(e);
-                                closeMenu();
-                            }}>{title}</a
-                        >
-                    {:else if url || (id && url != $page.path)}
-                        <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
-                    {/if}
-                </li>
-            {/if}
-        {/each}
-    </ul>
+<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap justify- {sideMenuOpen ? 'open' : ''}">
+    <div class="h-full flex flex-col items-start justify-between pb-10">
+        <ul
+            class="container h-auto pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
+                ? 'opacity-0 hidden'
+                : 'opacity-100 block'}"
+        >
+            {#each items as { title, url, id, onClick }}
+                {#if title}
+                    <li class="py-4 nav-link min-w-max">
+                        {#if id && url.startsWith("/#")}
+                            <a
+                                class={id === "#" + $activeSectionId ? "highlight" : ""}
+                                href={url}
+                                on:click|preventDefault={e => {
+                                    onClick(e);
+                                    closeMenu();
+                                }}>{title}</a
+                            >
+                        {:else if url || (id && url != $page.path)}
+                            <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                        {/if}
+                    </li>
+                {/if}
+            {/each}
+        </ul>
+        <div class="mx-auto mb-10 {sideMenuOpen ? 'flex' : 'hidden'}"><Button {...BUTTON} /></div>
+    </div>
 </aside>
 
 <style lang="scss">
