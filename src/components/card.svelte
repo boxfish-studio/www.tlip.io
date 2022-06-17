@@ -4,7 +4,7 @@
     export let withBorder: boolean = false;
 </script>
 
-<div class={`${classes} card py-8 md:py-14 px-6 md:px-9`} class:small class:withBorder>
+<div class={`card py-8 md:py-14 px-6 md:px-9 ${classes}`} class:small class:withBorder>
     <slot name="eyebrow" />
     <slot name="title" />
     <slot name="body" />

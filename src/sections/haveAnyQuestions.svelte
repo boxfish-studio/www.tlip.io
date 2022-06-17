@@ -24,12 +24,12 @@
 
 <section class="py-20 bg-blue-300" {id}>
     <div class="container flex text-white justify-between flex-col text-center lg:flex-row lg:text-left">
-        <div class="max-w-2xl lg:mr-7">
-            <h1 class="capitalize mb-6 flex text-36 md:text-64 justify-center lg:justify-start">{HEADING.title}</h1>
+        <div class="max-w-2xl w-full lg:mr-7">
+            <h1 class="capitalize mb-6 flex text-36 md:text-48 justify-center lg:justify-start">{HEADING.title}</h1>
             <p>{HEADING.description}</p>
             <div class="buttons w-full md:flex gap-x-7 mt-6 md:mt-10 lg:mt-28">
                 {#each BUTTONS as button}
-                    <div class="w-2/4 uppercase mx-auto mb-6 las:mb-0 md:mb-0">
+                    <div class="w-1/2 uppercase mx-auto mb-6 last:mb-0 md:mb-0">
                         <Button classes="text-16 font-bold h-14" {...button} secondary />
                     </div>
                 {/each}

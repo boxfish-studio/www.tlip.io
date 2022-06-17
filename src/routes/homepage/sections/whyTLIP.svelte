@@ -28,11 +28,11 @@
     <div class="w-full h-full lg:flex container justify-end">
         <div class="bg-green-500 w-full lg:w-1/2 py-16 lg:py-28 pl-6 lg:pl-24 xl:max-w-xl text-white">
             <div class="mb-9">
-                <h2 class="mb-6">{HEADINGS.title}</h2>
+                <h3 class="mb-6">{HEADINGS.title}</h3>
                 <p class="">{HEADINGS.description}</p>
             </div>
             {#each REASONS as reason}
-                <div class="lg:w-1/2 mb-6 last:mb-0">
+                <div class="lg:w-8/12 mb-6 last:mb-0">
                     <h3 class="mb-1.5">{reason.title}</h3>
                     <p>{reason.description}</p>
                 </div>

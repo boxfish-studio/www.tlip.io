@@ -36,7 +36,7 @@
                 {/each}
             </div>
         </div>
-        <div class="w-full lg:w-1/2">
+        <div class="w-full lg:w-10/12">
             <video
                 class="h-full w-full object-cover image-shadow"
                 muted

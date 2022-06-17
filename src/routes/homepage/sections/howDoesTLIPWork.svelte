@@ -73,14 +73,14 @@
 
 <section {id} class=" pt-16 lg:pt-40 pb-16 lg:pb-28">
     <div class="container">
-        <h2 class="mb-5 lg:mb-16 text-center ">{HEADINGS.title}</h2>
+        <h3 class="mb-5 lg:mb-16 text-center ">{HEADINGS.title}</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mb-16 md:mb-32">
             {#each CARDS as { title, description, icon }}
                 <Card classes="work bg-white" withBorder>
                     <div slot="eyebrow" class="mb-4 md:mb-6">
                         <Icon {...icon} />
                     </div>
-                    <h3 slot="title" class="tracking-0.02 mb-2 leading-110">{title}</h3>
+                    <h3 slot="title" class="tracking-0.02 mb-4 leading-110 text-28">{title}</h3>
                     <div slot="body" class="text-grey-500 tracking-0.04 leading-150">
                         {description}
                     </div>

@@ -41,20 +41,20 @@
 
 <section class="container py-16 md:pt-32 md:pb-36" {id}>
     <h2 class="text-center text-36 mb-9">{HEADING.title}</h2>
-    <p class="text-center leading-6 lg:px-52 tracking-0.04 mb-6 md:mb-32">{HEADING.description}</p>
+    <p class="text-center leading-6 lg:px-28 tracking-0.04 mb-6 md:mb-32">{HEADING.description}</p>
     {#each cards as { image, title, eyebrow, description }, idx}
         <div class="flex justify-center mb-9 md:mb-32 last:mb-0">
             <div class="flex flex-col md:flex-row justify-between">
                 <div
                     class="{idx % 2
                         ? 'md:order-1'
-                        : 'md:order-0'} mb-4 md:mb-12 lg:mb-0 items-center flex w-full md:w-1/2"
+                        : 'md:order-0'} mb-4 md:mb-12 lg:mb-0 items-center flex w-full md:w-8/12"
                 >
                     <img src="./assets/{image}" alt={title} class="image-shadow {idx % 2 ? 'ml-auto' : 'mr-auto'}" />
                 </div>
                 <div
                     class={`w-full md:w-1/2 flex flex-col items-start justify-center text-left ${
-                        idx % 2 ? "md:mr-16" : "md:ml-16"
+                        idx % 2 ? "md:mr-20" : "md:ml-20"
                     }`}
                 >
                     <h4 class="font-bold text-15 lg:text-20 tracking-0.02 leading-6 capitalize text-left text-grey-500">
