@@ -122,9 +122,7 @@
             @apply transition-colors;
             @apply duration-150;
         }
-        .highlight {
-            @apply font-bold;
-        }
+
         &.bg-blur {
             background-color: rgba(241, 242, 244, 0.8);
         }
