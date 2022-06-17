@@ -16,8 +16,8 @@
         <div class={`flex justify-between items-center w-full`}>
             <span
                 class="text-20 lg:text-28 leading-120 md:leading-110 tracking-0.02 font-semibold md:font-bold {active
-                    ? 'text-blue-400'
-                    : 'text-grey-600'}">{@html title}</span
+                    ? 'text-blue-400 metropolis-700'
+                    : 'text-grey-600 metropolis-600'}">{@html title}</span
             >
             <div
                 class="flex items-center justify-center relative ml-8 p-2.5 border {active

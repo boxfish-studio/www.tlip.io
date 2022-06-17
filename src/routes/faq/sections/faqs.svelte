@@ -9,7 +9,7 @@
             <div id="contents">
                 {#each data?.sections as section, index}
                     <div
-                        class={`text-32 md:text-36 leading-125 md:leading-110 tracking-0.02 font-bold mb-5 md:mb-10 text-blue-600 ${
+                        class={`text-32 md:text-36 leading-125 md:leading-110 tracking-0.02 font-bold mb-5 md:mb-10 text-blue-600 metropolis-700 ${
                             index > 0 && "mt-10 md:mt-20"
                         }`}
                     >
