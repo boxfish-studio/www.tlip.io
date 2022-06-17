@@ -110,3 +110,7 @@ p > ol {
         max-width: 1500px;
     }
 }
+
+.highlight {
+    @apply font-bold;
+}
