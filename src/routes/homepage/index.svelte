@@ -24,33 +24,33 @@
         },
         {
             component: WhatIsTLIP,
-            id: "WhatIsTLIP"
+            id: "what-is-tlip"
         },
         {
             component: WhyTLIP,
-            id: "WhyTLIP",
+            id: "why-tlip",
             lightModeNavbar: true
         },
         {
             component: HowDoesTLIPWork,
-            id: "HowDoesTLIPWork"
+            id: "how-does-tlip-work"
         },
         {
             component: WhoAreWe,
-            id: "WhoAreWe"
+            id: "who-we-are"
         },
         {
             component: UkEcosystem,
-            id: "UkEcosystem",
+            id: "uk-ecosystem",
             lightModeNavbar: true
         },
         {
             component: Benefits,
-            id: "Benefits"
+            id: "benefins"
         },
         {
             component: HaveAnyQuestions,
-            id: "HaveAnyQuestions"
+            id: "questions"
         }
     ];
 </script>

@@ -47,21 +47,25 @@ export const startActiveSectionObserver = (container: HTMLElement): (() => void)
     };
 };
 
+let scrollTimeout: NodeJS.Timeout;
 /**
  * Receives an event from an anchor tag and scrolls to the section.
  * @param event - An event object of an anchor tag.
  * @param event.target - The target of the event.
  */
 export const scrollIntoView = ({ target }): ((event: Event) => void) => {
+    clearTimeout(scrollTimeout);
     if (browser) {
         const targetID = target.getAttribute("href").replace("/", "");
         const el = document.querySelector(targetID);
         if (!el) {
             goto(target.href, { noscroll: true })
                 .then(() => {
-                    document.querySelector(targetID).scrollIntoView({
-                        behavior: "smooth"
-                    });
+                    scrollTimeout = setTimeout(() => {
+                        document.querySelector(targetID).scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }, 300);
                 })
                 .catch(() => []);
             return;
