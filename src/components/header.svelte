@@ -40,7 +40,10 @@
     };
 </script>
 
-<nav class="fixed py-1 z-50 w-full bg-blur text-grey-600 metropolis-500 {classes}" class:lightMode={$lightModeNavbar && !sideMenuOpen}>
+<nav
+    class="fixed py-1 z-50 w-full bg-blur text-grey-600 metropolis-500 {classes}"
+    class:lightMode={$lightModeNavbar && !sideMenuOpen}
+>
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
             <img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -52,7 +55,7 @@
             {#if items}
                 <!-- Desktop -->
                 <ul
-                    class="flex-row items-center md:space-x-2 lg:space-x-3 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
+                    class="flex-row items-center md:space-x-2 lg:space-x-6 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
                 >
                     {#each items as { title, url, id, onClick }}
                         {#if title}
@@ -119,9 +122,7 @@
             @apply transition-colors;
             @apply duration-150;
         }
-        .highlight {
-            @apply font-bold;
-        }
+
         &.bg-blur {
             background-color: rgba(241, 242, 244, 0.8);
         }

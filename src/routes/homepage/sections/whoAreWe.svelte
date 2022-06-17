@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="lg:w-1/2">
-            <img src="./assets/who-are-we.png" alt="TLIP in everyday life" class="w-full rounded-md" />
+            <img src="./assets/who-are-we.png" alt="TLIP in everyday life" class="h-full rounded-md" />
         </div>
     </div>
 </section>

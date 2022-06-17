@@ -15,7 +15,7 @@
     />
     <div class="container">
         <div class="text-white flex flex-col w-full h-full z-10">
-            <h1>{HEADING.title}</h1>
+            <h1 class="mb-4">{HEADING.title}</h1>
             <p>{HEADING.description}</p>
         </div>
     </div>
