@@ -80,7 +80,7 @@
                     <div slot="eyebrow" class="mb-4 md:mb-6">
                         <Icon {...icon} />
                     </div>
-                    <h3 slot="title" class="tracking-0.02 mb-2 leading-110">{title}</h3>
+                    <h3 slot="title" class="tracking-0.02 mb-4 leading-110">{title}</h3>
                     <div slot="body" class="text-grey-500 tracking-0.04 leading-150">
                         {description}
                     </div>
