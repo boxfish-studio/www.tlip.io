@@ -37,7 +37,7 @@
         <div class="mb-7 md:mb-4 xl:mb-0 flex justify-center items-center">
             <div class="w-full flex flex-col gap-y-7 md:gap-y-4 ">
                 {#each CARDS as { title, icon, description }}
-                    <Card classes="" withBorder>
+                    <Card withBorder small>
                         <div slot="eyebrow">
                             <Icon name={icon} />
                         </div>
