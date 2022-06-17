@@ -41,16 +41,16 @@
 
 <section class="container py-16 md:pt-32 md:pb-36" {id}>
     <h2 class="text-center text-36 mb-9">{HEADING.title}</h2>
-    <p class="text-center leading-6 tracking-0.04 mb-6 md:mb-32 max-w-4xl">{HEADING.description}</p>
+    <p class="text-center leading-6 tracking-0.04 mb-6 md:mb-32 mx-auto max-w-4xl">{HEADING.description}</p>
     {#each cards as { image, title, eyebrow, description }, idx}
         <div class="flex justify-center mb-9 md:mb-32 last:mb-0">
-            <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col md:flex-row justify-center">
                 <div
                     class="{idx % 2
                         ? 'md:order-1'
-                        : 'md:order-0'} mb-4 md:mb-12 lg:mb-0 items-center flex w-full md:w-8/12"
+                        : 'md:order-0'} mb-4 md:mb-12 lg:mb-0 items-center flex w-full md:w-auto"
                 >
-                    <img src="./assets/{image}" alt={title} class="image-shadow {idx % 2 ? 'ml-auto' : 'mr-auto'}" />
+                    <img src="./assets/{image}" alt={title} class="image-shadow ld:{idx % 2 ? 'ml-auto' : 'mr-auto'}" />
                 </div>
                 <div
                     class={`w-full md:w-1/2 flex flex-col items-start justify-center text-left ${

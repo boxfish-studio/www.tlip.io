@@ -19,7 +19,7 @@ $inter: "Inter", $fallback-fonts;
 html,
 body,
 #svelte {
-    font-family: "Metropolis medium", sans-serif;
+    font-family: "Metropolis regular", sans-serif;
 
     @apply h-full;
 }
@@ -58,6 +58,7 @@ h4 {
     @apply text-20;
     @apply leading-120;
     @apply tracking-0.02;
+    font-family: "Metropolis bold";
 }
 
 p {
@@ -84,6 +85,21 @@ p > ol {
     li:not(:last-of-type) {
         margin-bottom: 10px;
     }
+}
+
+.metropolis-700 {
+    font-family: "Metropolis bold";
+}
+
+.metropolis-600 {
+    font-family: "Metropolis Semi Bold";
+}
+
+.metropolis-400 {
+    font-family: "Metropolis Regular";
+}
+.metropolis-500 {
+    font-family: "Metropolis Medium";
 }
 
 .container {

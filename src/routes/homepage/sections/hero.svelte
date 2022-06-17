@@ -27,7 +27,7 @@
     <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full z-10">
         <div class="w-full text-center lg:text-left lg:w-1/2">
             <h1 class="mb-6">{HEADING.title}</h1>
-            <h4 class="text-grey-500 lg:max-w-md">{HEADING.description}</h4>
+            <h4 class="text-grey-500 lg:max-w-md metropolis-400">{HEADING.description}</h4>
             <div class="flex justify-center lg:justify-start mt-6 lg:mt-10 lg:mb-0 mb-9">
                 {#each BUTTONS as button}
                     <div class="mr-6 last:mr-0 uppercase">
@@ -36,7 +36,7 @@
                 {/each}
             </div>
         </div>
-        <div class="w-full lg:w-10/12">
+        <div class="w-full lg:w-10/12 max-w-xl">
             <video
                 class="h-full w-full object-cover image-shadow"
                 muted
