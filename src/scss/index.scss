@@ -85,3 +85,12 @@ p > ol {
         margin-bottom: 10px;
     }
 }
+
+.container {
+    @screen lg {
+        max-width: 1200px;
+    }
+    @screen xl {
+        max-width: 1500px;
+    }
+}

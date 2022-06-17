@@ -20,6 +20,10 @@
             @apply border;
             @apply rounded-md;
             @apply border-grey-100;
+            &.small {
+                @apply py-6;
+                @apply px-7;
+            }
         }
 
         &.work {

@@ -41,7 +41,7 @@
 
 <section class="container py-16 md:pt-32 md:pb-36" {id}>
     <h2 class="text-center text-36 mb-9">{HEADING.title}</h2>
-    <p class="text-center leading-6 lg:px-28 tracking-0.04 mb-6 md:mb-32">{HEADING.description}</p>
+    <p class="text-center leading-6 tracking-0.04 mb-6 md:mb-32 max-w-4xl">{HEADING.description}</p>
     {#each cards as { image, title, eyebrow, description }, idx}
         <div class="flex justify-center mb-9 md:mb-32 last:mb-0">
             <div class="flex flex-col md:flex-row justify-between">

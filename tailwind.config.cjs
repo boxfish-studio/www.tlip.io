@@ -7,12 +7,19 @@ module.exports = {
     },
     darkMode: "class",
     theme: {
+        screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1190px',
+            'xl': '1280px',
+            '2xl': '1536px',
+        },
         container: {
             center: true,
             padding: {
                 DEFAULT: '1.5rem',
                 md: '4.5rem',
-                xl: '7rem',
+                xl: '6rem',
                 '2xl': '7rem',
             },
         },
