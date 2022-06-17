@@ -103,11 +103,11 @@ p > ol {
 }
 
 .container {
-    @screen lg {
+    @screen xl {
         max-width: 1200px;
     }
-    @screen xl {
-        max-width: 1500px;
+    @screen 2xl {
+        max-width: 1200px;
     }
 }
 
