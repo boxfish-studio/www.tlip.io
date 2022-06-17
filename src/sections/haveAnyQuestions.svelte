@@ -30,7 +30,7 @@
             <div class="buttons w-full md:flex gap-x-7 mt-6 md:mt-10 lg:mt-28">
                 {#each BUTTONS as button}
                     <div class="w-2/4 uppercase mx-auto mb-6 las:mb-0 md:mb-0">
-                        <Button classes="text-16 font-bold h-14" {...button} small secondary />
+                        <Button classes="text-16 font-bold h-14" {...button} secondary />
                     </div>
                 {/each}
             </div>

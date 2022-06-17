@@ -15,10 +15,10 @@
 
 <section class="container bg-blue-500 pt-16 pb-20 lg:rounded-md" {id}>
     <div class="flex flex-col text-white justify-center items-center relative">
-        <h1 class="text-center mb-9">{HEADING.title}</h1>
-        <p class="max-w-4xl text-center mb-7">{HEADING.description}</p>
+        <h1 class="text-center mb-5 lg:mb-9">{HEADING.title}</h1>
+        <p class="max-w-4xl text-center mb-6 md:mb-12">{HEADING.description}</p>
         <img src="/assets/uk-ecosystem.png" alt="circle diagram" class="" />
-        <h4 class="mb-4 text-center mt-9">{INFO.title}</h4>
+        <h4 class="mb-5 md:mb-4 text-center mt-8 md:mt-9">{INFO.title}</h4>
         <small class="tracking-0.02 max-w-2xl text-center">{INFO.description}</small>
     </div>
 </section>

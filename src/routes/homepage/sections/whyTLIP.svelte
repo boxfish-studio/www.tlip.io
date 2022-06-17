@@ -32,7 +32,7 @@
                 <p class="">{HEADINGS.description}</p>
             </div>
             {#each REASONS as reason}
-                <div class="w-1/2 mb-6 last:mb-0">
+                <div class="lg:w-1/2 mb-6 last:mb-0">
                     <h3 class="mb-1.5">{reason.title}</h3>
                     <p>{reason.description}</p>
                 </div>
@@ -44,7 +44,7 @@
 
 <style lang="scss">
     .image {
-        min-height: 400px;
+        min-height: 375px;
         background: url("/assets/why-tlip.png");
         background-size: 100%;
         background-position: 45% 20%;
