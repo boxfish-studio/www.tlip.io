@@ -123,15 +123,14 @@
             @apply font-bold;
         }
         &.bg-blur {
-            @apply bg-grey-100;
-            @apply bg-opacity-20;
+            background-color: rgba(241, 242, 244, 0.8);
         }
         /* if backdrop support: transparent and blurred */
-        @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+        @supports ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
             &.bg-blur {
                 @apply bg-transparent;
-                -webkit-backdrop-filter: blur(4px);
-                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(16px);
+                backdrop-filter: blur(16px);
             }
         }
         &.lightMode {
