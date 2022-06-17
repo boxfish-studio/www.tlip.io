@@ -8,7 +8,14 @@ module.exports = {
     darkMode: "class",
     theme: {
         container: {
-            center: true
+            center: true,
+            padding: {
+                DEFAULT: '1.5rem',
+                md: '0rem',
+                lg: '0rem',
+                xl: '0rem',
+                '2xl': '0rem',
+            },
         },
         extend: {
             colors: {

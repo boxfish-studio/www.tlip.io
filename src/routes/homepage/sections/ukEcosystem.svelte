@@ -13,8 +13,8 @@
     };
 </script>
 
-<section class="lg:container pt-16 pb-20 lg:rounded-md" {id}>
-    <div class="bg-blue-500 flex flex-col text-white justify-center items-center relative py-16">
+<section class="pt-16 pb-20 lg:rounded-md" {id}>
+    <div class="container bg-blue-500 flex flex-col text-white justify-center items-center relative py-16">
         <h1 class="text-center mb-5 lg:mb-9 text-36">{HEADING.title}</h1>
         <p class="max-w-4xl text-center mb-6 md:mb-12">{HEADING.description}</p>
         <img src="/assets/uk-ecosystem.png" alt="circle diagram" class="" />
