@@ -14,8 +14,10 @@
         class="background-image absolute -bottom-12 md:-bottom-60 right-0"
     />
     <div class="container">
-        <div class="text-white flex flex-col w-full h-full z-10">
-            <h1 class="mb-4">{HEADING.title}</h1>
+        <div
+            class="text-white flex flex-col justify-center lg:justify-start items-center lg:items-start text-center lg:text-left w-full h-full z-10"
+        >
+            <h1 class="mb-6">{HEADING.title}</h1>
             <p>{HEADING.description}</p>
         </div>
     </div>
