@@ -12,7 +12,8 @@ const GOVERNMENT_PARTNERS = {
     "/assets/partners/KEPHIS-logo.png",
     "/assets/partners/KENTrade-logo.png",
     "/assets/partners/Trademark-logo.png",
-    "/assets/partners/ministry-foreign-affairs-netherlands-logo.png"
+    "/assets/partners/ministry-foreign-affairs-netherlands-logo.png",
+    "/assets/partners/hm-government-logo.png"
   ]
 };
 
